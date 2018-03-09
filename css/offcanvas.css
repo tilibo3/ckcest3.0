@@ -1,0 +1,443 @@
+a {
+    background: transparent;
+}
+
+.uk-link {
+    color: #0077dd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.uk-button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+/*
+ * 1. Correct inability to style clickable `input` types in iOS.
+ * 2. Remove margins in Chrome, Safari and Opera.
+ * 3. Remove borders for `button`.
+ * 4. Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * 5. Correct `font` properties and `color` not being inherited for `button`.
+ * 6. Address inconsistent `text-transform` inheritance which is only inherit in Firefox and IE
+ * 7. Style
+ * 8. `line-height` is used to create a height
+ * 9. `min-height` is necessary for `input` elements in Firefox and Opera because `line-height` is not working.
+ * 10. Reset button group whitespace hack
+ * 11. Required for `a`.
+ */
+.uk-button {
+    /* 1 */
+    -webkit-appearance: none;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+    border: none;
+    /* 4 */
+    overflow: visible;
+    /* 5 */
+    font: inherit;
+    color: #444444;
+    /* 6 */
+    text-transform: none;
+    /* 7 */
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 12px;
+    background: #eeeeee;
+    vertical-align: middle;
+    /* 8 */
+    line-height: 30px;
+    /* 9 */
+    min-height: 30px;
+    /* 10 */
+    font-size: 1rem;
+    /* 11 */
+    text-decoration: none;
+    text-align: center;
+}
+.uk-button:not(:disabled) {
+    cursor: pointer;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ * 3. Required for `a` elements
+ */
+.uk-button:hover,
+.uk-button:focus {
+    background-color: #f5f5f5;
+    color: #444444;
+    /* 2 */
+    outline: none;
+    /* 3 */
+    text-decoration: none;
+}
+/* Active */
+.uk-button:active,
+.uk-button.uk-active {
+    background-color: #dddddd;
+    color: #444444;
+}
+
+
+/* ========================================================================
+   Component: Off-canvas
+ ========================================================================== */
+/*
+ * This is the offcanvas overlay and bar container
+ * 1. Hide by default
+ * 2. Set fixed position
+ * 3. Deactivate browser touch actions in IE11
+ * 4. Mask the background page
+ */
+.uk-offcanvas {
+    /* 1 */
+    display: none;
+    /* 2 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    /* 3 */
+    touch-action: none;
+    /* 4 */
+    background: rgba(0, 0, 0, 0.1);
+}
+.uk-offcanvas.uk-active {
+    display: block;
+}
+/* Sub-object `uk-offcanvas-page`
+ ========================================================================== */
+/*
+ * Prepares the whole HTML page to slide-out
+ * 1. Fix the main page and disallow scrolling
+ * 2. Side-out transition
+ */
+.uk-offcanvas-page {
+    /* 1 */
+    position: fixed;
+    /* 2 */
+    -webkit-transition: margin-left 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out;
+}
+/* Sub-object `uk-offcanvas-bar`
+ ========================================================================== */
+/*
+ * This is the offcanvas bar
+ * 1. Set fixed position
+ * 2. Size and style
+ * 3. Allow scrolling
+ * 4. Side-out transition
+ * 5. Deactivate scroll chaining in IE11
+ */
+.uk-offcanvas-bar {
+    /* 1 */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 1001;
+    /* 2 */
+    width: 270px;
+    max-width: 100%;
+    background: #333333;
+    /* 3 */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* 4 */
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    /* 5 */
+    -ms-scroll-chaining: none;
+}
+.uk-offcanvas.uk-active .uk-offcanvas-bar.uk-offcanvas-bar-show {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+/* Modifier `uk-offcanvas-bar-flip`
+ ========================================================================== */
+.uk-offcanvas-bar-flip {
+    left: auto;
+    right: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+/* Panel in offcanvas
+ ========================================================================== */
+.uk-offcanvas .uk-panel {
+    margin: 20px 15px;
+    color: #777777;
+}
+.uk-offcanvas .uk-panel-title {
+    color: #cccccc;
+}
+.uk-offcanvas .uk-panel a:not([class]) {
+    color: #cccccc;
+}
+.uk-offcanvas .uk-panel a:not([class]):hover {
+    color: #ffffff;
+}
+
+
+/* ========================================================================
+   Component: Nav
+ ========================================================================== */
+.uk-nav,
+.uk-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*
+ * Items
+ */
+.uk-nav li > a {
+    display: block;
+    text-decoration: none;
+}
+.uk-nav > li > a {
+    padding: 5px 15px;
+}
+/*
+ * Nested items
+ */
+.uk-nav ul {
+    padding-left: 15px;
+}
+.uk-nav ul a {
+    padding: 2px 0;
+}
+/*
+ * Item subtitle
+ */
+.uk-nav li > a > div {
+    font-size: 12px;
+    line-height: 18px;
+}
+/* Sub-object: `uk-nav-header`
+ ========================================================================== */
+.uk-nav-header {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+.uk-nav-header:not(:first-child) {
+    margin-top: 15px;
+}
+/* Sub-object: `uk-nav-divider`
+ ========================================================================== */
+.uk-nav-divider {
+    margin: 9px 15px;
+}
+/* Sub-object: `uk-nav-sub`
+ ========================================================================== */
+/*
+ * `ul` needed for higher specificity to override padding
+ */
+ul.uk-nav-sub {
+    padding: 5px 0 5px 15px;
+}
+/* Modifier: `uk-nav-parent-icon`
+ ========================================================================== */
+.uk-nav-parent-icon > .uk-parent > a:after {
+    content: "\f104";
+    width: 20px;
+    margin-right: -10px;
+    float: right;
+    font-family: FontAwesome;
+    text-align: center;
+}
+.uk-nav-parent-icon > .uk-parent.uk-open > a:after {
+    content: "\f107";
+}
+/* Modifier `uk-nav-side`
+ ========================================================================== */
+/*
+ * Items
+ */
+.uk-nav-side > li > a {
+    color: #444444;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-nav-side > li > a:hover,
+.uk-nav-side > li > a:focus {
+    background: rgba(0, 0, 0, 0.05);
+    color: #444444;
+    /* 2 */
+    outline: none;
+}
+/* Active */
+.uk-nav-side > li.uk-active > a {
+    background: #00a8e6;
+    color: #ffffff;
+}
+/*
+ * Sub-object: `uk-nav-header`
+ */
+.uk-nav-side .uk-nav-header {
+    color: #444444;
+}
+/*
+ * Sub-object: `uk-nav-divider`
+ */
+.uk-nav-side .uk-nav-divider {
+    border-top: 1px solid #dddddd;
+}
+/*
+ * Nested items
+ */
+.uk-nav-side ul a {
+    color: #0077dd;
+}
+.uk-nav-side ul a:hover {
+    color: #005599;
+}
+/* Modifier `uk-nav-dropdown`
+ ========================================================================== */
+/*
+ * Items
+ */
+.uk-nav-dropdown > li > a {
+    color: #444444;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-nav-dropdown > li > a:hover,
+.uk-nav-dropdown > li > a:focus {
+    background: #00a8e6;
+    color: #ffffff;
+    /* 2 */
+    outline: none;
+}
+/*
+ * Sub-object: `uk-nav-header`
+ */
+.uk-nav-dropdown .uk-nav-header {
+    color: #999999;
+}
+/*
+ * Sub-object: `uk-nav-divider`
+ */
+.uk-nav-dropdown .uk-nav-divider {
+    border-top: 1px solid #dddddd;
+}
+/*
+ * Nested items
+ */
+.uk-nav-dropdown ul a {
+    color: #0077dd;
+}
+.uk-nav-dropdown ul a:hover {
+    color: #005599;
+}
+/* Modifier `uk-nav-navbar`
+ ========================================================================== */
+/*
+ * Items
+ */
+.uk-nav-navbar > li > a {
+    color: #444444;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-nav-navbar > li > a:hover,
+.uk-nav-navbar > li > a:focus {
+    background: #00a8e6;
+    color: #ffffff;
+    /* 2 */
+    outline: none;
+}
+/*
+ * Sub-object: `uk-nav-header`
+ */
+.uk-nav-navbar .uk-nav-header {
+    color: #999999;
+}
+/*
+ * Sub-object: `uk-nav-divider`
+ */
+.uk-nav-navbar .uk-nav-divider {
+    border-top: 1px solid #dddddd;
+}
+/*
+ * Nested items
+ */
+.uk-nav-navbar ul a {
+    color: #0077dd;
+}
+.uk-nav-navbar ul a:hover {
+    color: #005599;
+}
+/* Modifier `uk-nav-offcanvas`
+ ========================================================================== */
+/*
+ * Items
+ */
+.uk-nav-offcanvas > li > a {
+    color: #cccccc;
+    padding: 10px 15px;
+}
+/*
+ * Hover
+ * No hover on touch devices because it behaves buggy in fixed offcanvas
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-nav-offcanvas > .uk-open > a,
+html:not(.uk-touch) .uk-nav-offcanvas > li > a:hover,
+html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
+    background: #404040;
+    color: #ffffff;
+    /* 2 */
+    outline: none;
+}
+/*
+ * Active
+ * `html .uk-nav` needed for higher specificity to override hover
+ */
+html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+/*
+ * Sub-object: `uk-nav-header`
+ */
+.uk-nav-offcanvas .uk-nav-header {
+    color: #777777;
+}
+/*
+ * Sub-object: `uk-nav-divider`
+ */
+.uk-nav-offcanvas .uk-nav-divider {
+    border-top: 1px solid #1a1a1a;
+}
+/*
+ * Nested items
+ * No hover on touch devices because it behaves buggy in fixed offcanvas
+ */
+.uk-nav-offcanvas ul a {
+    color: #cccccc;
+}
+html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
+    color: #ffffff;
+}
+
+div#offcanvas-3 {
+    margin-top: 0;
+}

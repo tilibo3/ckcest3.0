@@ -1,0 +1,2835 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>中国工程科技知识中心网站前端开发框架</title>
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script src="js/api.js" type="text/javascript"></script>
+<script src="js/slides.min.jquery.js" type="text/javascript"></script>
+<script src="js/prism.js" type="text/javascript"></script>
+<script src="js/jquery.SuperSlide.min.js" type="text/javascript"></script>
+<script src="js/uikit.js"></script>
+<script src="js/offcanvas.js"></script>
+<script src="js/prefix-free.js"></script>
+<script src="js/changeState.js"></script>
+
+<!-- Custom Theme files -->
+<!-- <link href="css/dashboard.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="css/offcanvas.css">
+<link rel="stylesheet" href="css/uikit.css">
+<link rel="stylesheet" href="css/audioplayer.css" />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/CKECEST_style.css" rel="stylesheet" type="text/css" />
+<link href="css/prism.css" rel='stylesheet' type='text/css' />
+<link href="css/layout.css" rel='stylesheet' type='text/css' />
+<link href="css/iconic.css" media="screen" rel="stylesheet" type="text/css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Rissner Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+<!-- header -->
+
+<header>
+	<!--<div class="sidebar_top">-->
+		<!--<img src="images/CKCEST.png">-->
+	<!--</div>-->
+	<div class="header_content">
+		<img src="images/CKCEST.png">
+		<img src="images/header_title.png">
+		<a href="documents/framework2.0.rar">
+			<div class="font_CN_L Button" id="downloadButton">
+				框&nbsp;&nbsp;架&nbsp;&nbsp;下&nbsp;&nbsp;载
+			</div>
+		</a>
+		<a href="documents/standard.pdf" target="_blank">
+			<div class="font_CN_L Button" id="standardButton">
+				前&nbsp;&nbsp;端&nbsp;&nbsp;规&nbsp;&nbsp;范
+			</div>
+		</a>
+		<a href="documents/PSD.psd" target="_blank">
+			<div class="font_CN_L Button" id="PSDButton">
+				设&nbsp;&nbsp;计&nbsp;&nbsp;PSD
+			</div>
+		</a>
+	</div>
+
+</header>
+
+<div class="main">
+	<div class="sidebar">
+
+		<div class="top-navigation">
+			<div class="t-menu">MENU</div>
+			<div class="t-img">
+				<img src="images/lines.png" alt="" />
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<br>
+		<div class="drop-navigation">
+			<div class="top-menu">
+				<div id="menu-tag">
+					<ul>
+						<li class="active"><a href="#header">Overview</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- script-for-menu -->
+			<script>
+                $( ".top-navigation" ).click(function() {
+                    $( ".drop-navigation" ).slideToggle( 300, function() {
+                        // Animation complete.
+                    });
+                });
+			</script>
+		</div>
+	</div>
+
+	<div class="side-content">
+
+		<div id="description">
+			<br>
+			<h1>概述</h1>
+			<br><br>
+			<h2>一、网站简介</h2>
+			<br><br>
+			<p>欢迎来到中国工程科技知识中心网站前端开发框架，通过左侧目录可以直接找到想要的控件，在每一个控件部分，都有该控件的示例，在示例的下方，有相应的html代码和JavaScript代码。</p>
+			<br><br>
+			<h2>二、目的</h2>
+			<br><br>
+			<p>本开发框架是为了配合中国工程科技知识中心建设，解决目前多个分中心及子系统设计风格不一致的问题而进行建设的。前端开发框架，提供了网页开发过程中，前端组件的样式开发，在应用本框架后，各子系统将全部继承本框架的设计风格，从而达到设计统一的目的，于此同时也降低了各子系统开发时的前端开发成本。</p>
+			<br><br>
+			<h2>三、使用方法</h2>
+			<br><br>
+			<p>可通过点击页面右上角的按钮，来下载框架文件，各个组件的设计稿和前端代码设计规范。框架文件中包括HTML、CSS、JavaScript的源文件，可以用Sublime Text等文本编辑器打开，设计稿可使用Photoshop打开。代码规范为PDF格式，方便小团队和非专业前端队伍形成编码共识，提高协作效率。</p>
+			<br><br>
+			<h1>组件</h1>
+			<br>
+
+		</div>
+
+		<div id="classification">
+			<div class="element">
+				<div class="displayView">
+					<!-- header part -->
+					<div class="headerArea">
+						<div class="pageLink">
+							<ul class="portalLinks CN_S">
+								<a href="#"><li>登录</li></a>
+								<a href="#"><li>帮助中心</li></a>
+								<a href="#"><li>知识中心导航</li></a>
+								<a href="#"><li>知识中心首页</li></a>
+								<a href="#"><li>系统首页</li></a>
+							</ul>
+						</div>
+						<div class="siteTitle">
+							<div class="titleImage"></div>
+						</div>
+					</div>
+					<!-- header part -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="headerArea"&gt;
+                	&lt;div class="pageLink"&gt;
+                    	&lt;ul class="portalLinks CN_S"&gt;
+                        	&lt;a href="#"&gt;&lt;li&gt;登录&lt;/li&gt;&lt;/a&gt;
+                        	&lt;a href="#"&gt;&lt;li&gt;帮助中心&lt;/li&gt;&lt;/a&gt;
+                        	&lt;a href="#"&gt;&lt;li&gt;知识中心导航&lt;/li&gt;&lt;/a&gt;
+                        	&lt;a href="#"&gt;&lt;li&gt;知识中心首页&lt;/li&gt;&lt;/a&gt;
+                        	&lt;a href="#"&gt;&lt;li&gt;系统首页&lt;/li&gt;&lt;/a&gt;
+                    	&lt;/ul&gt;
+                	&lt;/div&gt;
+                	&lt;div class="siteTitle"&gt;
+                    	&lt;div class="titleImage"&gt;&lt;/div&gt;
+                	&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- <div>环形可视化比例图api(Function: circleSort)</div> -->
+					<!-- header part -->
+					<div class="circleDistributions">
+						<canvas id="circleCanvas0" width="120" height="120" style="margin-left:40px; margin-top:40px;"></canvas>
+						<canvas id="circleCanvas1" width="120" height="120" style="margin-left:40px; margin-top:40px;"></canvas>
+						<canvas id="circleCanvas2" width="120" height="120" style="margin-left:40px; margin-top:40px;"></canvas>
+						<canvas id="circleCanvas3" width="120" height="120" style="margin-left:40px; margin-top:40px;"></canvas>
+						<canvas id="circleCanvas4" width="120" height="120" style="margin-left:40px; margin-top:40px;"></canvas>
+						<canvas id="circleCanvas5" width="120" height="120" style="margin-left:40px; margin-top:40px;"></canvas>
+					</div>
+					<script type="text/javascript">
+                        circleSort("circleCanvas0",1,2);
+                        circleSort("circleCanvas1",1,3,5);
+                        circleSort("circleCanvas2",2,4,6,8);
+                        circleSort("circleCanvas3",1,2,3,4,5);
+                        circleSort("circleCanvas4",2,2,3,4,5,6);
+                        circleSort("circleCanvas5",2,3,4,5,6,7,8);
+					</script>
+					<!-- header part -->
+				</div>
+				<!-- <b>HTML代码如下：</b> -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="circleDistributions"&gt;
+            		&lt;canvas id="circleCanvas0" width="120" height="120" style="margin-left:40px; margin-top:40px;"&gt;&lt;/canvas&gt;
+                	&lt;canvas id="circleCanvas1" width="120" height="120" style="margin-left:40px; margin-top:40px;"&gt;&lt;/canvas&gt;
+                	&lt;canvas id="circleCanvas2" width="120" height="120" style="margin-left:40px; margin-top:40px;"&gt;&lt;/canvas&gt;
+                	&lt;canvas id="circleCanvas3" width="120" height="120" style="margin-left:40px; margin-top:40px;"&gt;&lt;/canvas&gt;
+                	&lt;canvas id="circleCanvas4" width="120" height="120" style="margin-left:40px; margin-top:40px;"&gt;&lt;/canvas&gt;
+                	&lt;canvas id="circleCanvas5" width="120" height="120" style="margin-left:40px; margin-top:40px;"&gt;&lt;/canvas&gt;
+            	&lt;/div&gt;
+            </code></pre>
+				<pre><p>javascript代码如下：</p><code class="language-javascript">
+            	&lt;script type="text/javascript"&gt;
+			  		circleSort("circleCanvas0",1,2);
+			  		circleSort("circleCanvas1",1,3,5);
+			  		circleSort("circleCanvas2",2,4,6,8);
+			  		circleSort("circleCanvas3",1,2,3,4,5);
+			  		circleSort("circleCanvas4",2,2,3,4,5,6);
+			  		circleSort("circleCanvas5",2,3,4,5,6,7,8);
+            	&lt;/script&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- banner slide -->
+					<div class="bannerArea">
+						<div id="slides">
+							<div class="slides_container">
+								<a href="#"><img src="images/banner/banner01.png" width="1000" height="400" alt="Slide 1"></a>
+								<a href="#"><img src="images/banner/banner02.png" width="1000" height="400" alt="Slide 2"></a>
+								<a href="#"><img src="images/banner/banner03.png" width="1000" height="400" alt="Slide 3"></a>
+								<a href="#"><img src="images/banner/banner04.png" width="1000" height="400" alt="Slide 4"></a>
+							</div>
+							<a href="#" class="prev"><img src="images/banner/arrow-prev.png" width="31" height="84" alt="Arrow Prev"></a>
+							<a href="#" class="next"><img src="images/banner/arrow-next.png" width="31" height="84" alt="Arrow Next"></a>
+						</div>
+					</div>
+					<script>
+                        $(function(){
+                            $('#slides').slides({
+                                preload: false,
+                                play: 3000,
+                                pause: 2500,
+                                hoverPause: true
+                            });
+                        });
+					</script>
+					<!-- banner slider -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="bannerArea"&gt;
+					&lt;div id="slides"&gt;
+						&lt;div class="slides_container"&gt;
+							&lt;a href=""&gt;&lt;img src="images/banner/banner01.png" width="1000" height="400" alt="Slide 1"&gt;&lt;/a&gt;
+							&lt;a href=""&gt;&lt;img src="images/banner/banner02.png" width="1000" height="400" alt="Slide 2"&gt;&lt;/a&gt;
+							&lt;a href=""&gt;&lt;img src="images/banner/banner03.png" width="1000" height="400" alt="Slide 3"&gt;&lt;/a&gt;
+							&lt;a href=""&gt;&lt;img src="images/banner/banner04.png" width="1000" height="400" alt="Slide 4"&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;a href="#" class="prev"&gt;&lt;img src="images/banner/arrow-prev.png" width="31" height="84" alt="Arrow Prev"&gt;&lt;/a&gt;
+						&lt;a href="#" class="next"&gt;&lt;img src="images/banner/arrow-next.png" width="31" height="84" alt="Arrow Next"&gt;&lt;/a&gt;
+					&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+				<pre><p>javascript代码如下：</p><code class="language-javascript">
+            	&lt;script&gt;
+            	$(function(){
+            		$('#slides').slides({
+                		preload: false,
+                		play: 3000,
+                		pause: 2500,
+                		hoverPause: true
+              		});
+             	});
+            	&lt;/script&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 搜索框 -->
+					<div class="searchArea">
+						<form>
+							<input type="text" class="searchInput CN_L" placeholder="Search Here . . ."/>
+							<input type="submit" class="searchSubmit floatRight" value=""/>
+						</form>
+					</div>
+					<!-- 搜索框 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="searchArea"&gt;
+                	&lt;form&gt;
+                    	&lt;input type="text" class="searchInput CN_L" placeholder="Search Here . . ."/&gt;
+                    	&lt;input type="submit" class="searchSubmit floatRight" value=""/&gt;
+                	&lt;/form&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--子搜索框1 -->
+				<div class="displayView2">
+					<div class="SearchBar">
+						<div class="EN_T">SEARCH</div>
+						<div class="SearchInputArea">
+							<form>
+								<input type="text"  class="SearchInput_L CN_L" placeholder="Search">
+								<input type="submit" class="searchSubmit3" value=""/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="SearchBar"&gt;
+            		&lt;div class="EN_T"&gt;SEARCH&lt;/div&gt;
+            		&lt;div class="SearchInputArea"&gt;
+            			&lt;form&gt;
+            				&lt;input type="text"  class="SearchInput_L CN_L" placeholder="Search"&gt;
+            				&lt;input type="submit" class="searchSubmit3" value=""/&gt;
+            			&lt;/form&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+			<!--子搜索框1 -->
+
+			<div class="element">
+				<!--子搜索框2 -->
+				<div class="displayView2">
+					<div class="SearchBar">
+						<div class="EN_T">SEARCH</div>
+						<div class="SearchInputArea">
+							<form >
+								<input type="text"  class="SearchInput_S CN_L" placeholder="Search">
+								<label class="magnifier" ></label>
+								<input type="submit" class="SearchSubButton floatRight" value="Search">
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--子搜索框2 -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="SearchBar"&gt;
+            	&lt;div class="EN_T"&gt;SEARCH&lt;/div&gt;
+            		&lt;div class="SearchInputArea"&gt;
+            			&lt;form &gt;
+            				&lt;input type="text"  class="SearchInput_S CN_L" placeholder="Search"&gt;
+            				&lt;label class="magnifier" &gt;&lt;/label&gt;
+            				&lt;input type="submit" class="SearchSubButton floatRight" value="Search"&gt;
+            			&lt;/form&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--TAB MENU -->
+				<div class="displayView2">
+					<div class="TabMenueCont">
+						<div class="EN_T">TAB MENU</div>
+						<div class="TabMenue">
+							<li class="TAB1 border_right  floatLeft "></li>
+							<li class="TAB2 border_right  floatLeft"></li>
+							<li class="TAB3 border_right  floatLeft"></li>
+							<li class="TAB4 border_right  floatLeft"></li>
+							<li class="TAB5 floatRight"></li>
+						</div>
+						<div class="TAB_CONT EN_L">
+							<p class="EN_Cont">No menus Added yet</p>
+							<form>
+								<input type="submit" class="AddButton EN_L" value="+ Add">
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--TAB MENU -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="TabMenueCont"&gt;
+            		&lt;div class="EN_T"&gt;TAB MENU&lt;/div&gt;
+            		&lt;div class="TabMenue"&gt;
+            			&lt;li class="TAB1 border_right  floatLeft "&gt;&lt;/li&gt;
+            			&lt;li class="TAB2 border_right  floatLeft"&gt;&lt;/li&gt;
+            			&lt;li class="TAB3 border_right  floatLeft"&gt;&lt;/li&gt;
+            			&lt;li class="TAB4 border_right  floatLeft"&gt;&lt;/li&gt;
+            			&lt;li class="TAB5 floatRight"&gt;&lt;/li&gt;
+            		&lt;/div&gt;
+            		&lt;div class="TAB_CONT EN_L"&gt;
+            			&lt;p class="EN_Cont"&gt;No menus Added yet&lt;/p&gt;
+            			&lt;form&gt;
+              				&lt;input type="submit" class="AddButton EN_L" value="+ Add"&gt;
+            			&lt;/form&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--MEMBER LOGIN -->
+				<div class="displayView2">
+					<div class="LoginCont">
+						<div class="LoginTitle EN_Title2">MEMBER  LOGIN</div>
+						<form>
+							<input type="text" class="LoginINP EN_Input" placeholder="Username">
+							<input type="text" class="LoginINP EN_Input" placeholder="Password">
+						</form>
+						<p class="EN_M center">Forget password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New account</p>
+						<form>
+							<input type="submit" class="LoginButton EN_Input" value="LOGIN">
+						</form>
+						<p class="EN_M">Service&nbsp;Tel:&nbsp;0571-00000000</p>
+						<p class="EN_M">Service&nbsp;Email:&nbsp;popppp@163.com</p>
+					</div>
+				</div>
+				<!--MEMBER LOGIN -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="LoginCont"&gt;
+            		&lt;div class="LoginTitle EN_Title2"&gt;MEMBER  LOGIN&lt;/div&gt;
+            		&lt;form&gt;
+            			&lt;input type="text" class="LoginINP EN_Input" placeholder="Username"&gt;
+            			&lt;input type="text" class="LoginINP EN_Input" placeholder="Password"&gt;
+            		&lt;/form&gt;
+            		&lt;p class="EN_M center"&gt;Forget password&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;New account&lt;/p&gt;
+            		&lt;form&gt;
+            			&lt;input type="submit" class="LoginButton EN_Input" value="LOGIN"&gt;
+            		&lt;/form&gt;
+            		&lt;p class="EN_M"&gt;Service&amp;nbsp;Tel:&amp;nbsp;0571-00000000&lt;/p&gt;
+            		&lt;p class="EN_M"&gt;Service&amp;nbsp;Email:&amp;nbsp;popppp@163.com&lt;/p&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--RadioCheck -->
+				<div class="displayView2">
+					<div class="RadioCheck">
+						<div class="CheckLine">
+							<input type="checkbox" class="CheckBox" >I am a Human Being
+						</div>
+						<div class="CheckLine">
+							<input type="checkbox" class="CheckBox" checked >I like music very much
+						</div>
+					</div>
+				</div>
+				<!--RadioCheck-->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="RadioCheck"&gt;
+            		&lt;div class="CheckLine"&gt;
+            			&lt;input type="checkbox" class="CheckBox" &gt;I am a Human Being
+            		&lt;/div&gt;
+            		&lt;div class="CheckLine"&gt;
+            			&lt;input type="checkbox" class="CheckBox" checked &gt;I like music very much
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--UPLOAD IMAGE -->
+				<div class="displayView2">
+					<div class="UploadImage">
+						<div class="UploadImgTitle center">
+							<p class="EN_Title1">UPLOAD &nbsp; IMAGE</p>
+						</div>
+						<div class="DragImage center">
+							<p class="EN_UploadImg">DRAG&nbsp; IMAGES</p>
+						</div>
+						<form class=" center">
+							<input type="button" class="BrowseButton" value="Browse">
+						</form>
+						<p class="EN_L  center">Drag&nbsp;or&nbsp;browse&nbsp;images </p>
+					</div>
+				</div>
+				<!--UPLOAD IMAGE -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="UploadImage"&gt;
+            		&lt;div class="UploadImgTitle center"&gt;
+            			&lt;p class="EN_Title1"&gt;UPLOAD &amp;nbsp; IMAGE&lt;/p&gt;
+            		&lt;/div&gt;
+            		&lt;div class="DragImage center"&gt;
+            			&lt;p class="EN_UploadImg"&gt;DRAG&amp;nbsp; IMAGES&lt;/p&gt;
+            		&lt;/div&gt;
+            		&lt;form class=" center"&gt;
+            			&lt;input type="button" class="BrowseButton" value="Browse"&gt;
+            		&lt;/form&gt;
+            		&lt;p class="EN_L  center"&gt;Drag&amp;nbsp;or&amp;nbsp;browse&amp;nbsp;images &lt;/p&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--Register -->
+				<div class="displayView2">
+					<div class="RegisterCont">
+						<div class="RegisterTitle center">
+							<p class="EN_Title2">WELCOM&nbsp;TO&nbsp;OUR&nbsp;SYSTEM&nbsp;!</p>
+						</div>
+						<div class="Regline">
+							<label class="Registerlabel">Your email address :</label>
+							<input type="text" class="RegisterINP">
+						</div>
+						<div class="Regline">
+							<label class="Registerlabel">Create a password :</label>
+							<input type="text" class="RegisterINP">
+						</div>
+
+						<div class="Regline">
+							<label class="Registerlabel">Retype password :</label>
+							<input type="text" class="RegisterINP">
+						</div>
+
+						<div class="Regline">
+							<label class="Registerlabel">Your username :</label>
+							<input type="text" class="RegisterINP">
+						</div>
+
+						<div class="Regline">
+							<label class="Registerlabel">Nantionality :</label>
+							<select type="select" class="RegisterINP">
+								<option value="1">China</option>
+								<option value="2">USA</option>
+							</select>
+						</div>
+						<div class="Regline">
+							<label class="Registerlabel">Gender :</label>
+							<select type="select" class="RegisterINP">
+								<option value="1">Male</option>
+								<option value="2">Female</option>
+							</select>
+						</div>
+						<form class="center">
+							<input type="button" class="RegisterButton EN_Input" value="SUBMIT">
+						</form>
+					</div>
+				</div>
+				<!--Register -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="RegisterCont"&gt;
+            		&lt;div class="RegisterTitle center"&gt;
+            			&lt;p class="EN_Title2"&gt;WELCOM&amp;nbsp;TO&amp;nbsp;OUR&amp;nbsp;SYSTEM&amp;nbsp;!&lt;/p&gt;
+            		&lt;/div&gt;
+            		&lt;div class="Regline"&gt;
+            			&lt;label class="Registerlabel"&gt;Your email address :&lt;/label&gt;
+            			&lt;input type="text" class="RegisterINP"&gt;
+            		&lt;/div&gt;
+            		&lt;div class="Regline"&gt;
+            			&lt;label class="Registerlabel"&gt;Create a password :&lt;/label&gt;
+            			&lt;input type="text" class="RegisterINP"&gt;
+            		&lt;/div&gt;
+
+            		&lt;div class="Regline"&gt;
+            			&lt;label class="Registerlabel"&gt;Retype password :&lt;/label&gt;
+            			&lt;input type="text" class="RegisterINP"&gt;
+            		&lt;/div&gt;
+
+            		&lt;div class="Regline"&gt;
+            			&lt;label class="Registerlabel"&gt;Your username :&lt;/label&gt;
+            			&lt;input type="text" class="RegisterINP"&gt;
+            		&lt;/div&gt;
+
+            		&lt;div class="Regline"&gt;
+            			&lt;label class="Registerlabel"&gt;Nantionality :&lt;/label&gt;
+            			&lt;select type="select" class="RegisterINP"&gt;
+            				&lt;option value="1"&gt;China&lt;/option&gt;
+            				&lt;option value="2"&gt;USA&lt;/option&gt;
+            			&lt;/select&gt;
+            		&lt;/div&gt;
+            		&lt;div class="Regline"&gt;
+            			&lt;label class="Registerlabel"&gt;Gender :&lt;/label&gt;
+            			&lt;select type="select" class="RegisterINP"&gt;
+            				&lt;option value="1"&gt;Male&lt;/option&gt;
+            				&lt;option value="2"&gt;Female&lt;/option&gt;
+            			&lt;/select&gt;
+            		&lt;/div&gt;
+            		&lt;form class="center"&gt;
+            			&lt;input type="button" class="RegisterButton EN_Input" value="SUBMIT"&gt;
+            		&lt;/form&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- submit按钮 -->
+					<div class="submitButtonArea">
+						<form>
+							<input type="submit" class="submitButton button EN_L" value="Submit me"/>
+						</form>
+					</div>
+					<!-- submit按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="submitButtonArea"&gt;
+                	&lt;form&gt;
+                    	&lt;input type="submit" class="submitButton button EN_L" value="Submit me"/&gt;
+                	&lt;/form&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- ok按钮 -->
+					<div class="okButtonArea">
+						<form>
+							<input type="submit" class="okButton button EN_L" value="OK"/>
+						</form>
+					</div>
+					<!-- ok按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="okButtonArea"&gt;
+	                &lt;form&gt;
+	                	&lt;input type="submit" class="okButton button EN_L" value="OK"/&gt;
+	                &lt;/form&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- confirm按钮 -->
+					<div class="confirmButtonArea">
+						<form>
+							<button class="confirmButton button EN_L">
+								<img src="images/icons/tickIcon.png" class="floatLeft"></img>
+								<label>Confirm</label>
+							</button>
+						</form>
+					</div>
+					<!-- confirm按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="confirmButtonArea"&gt;
+	                &lt;form&gt;
+	                    &lt;button class="confirmButton button EN_L"&gt;
+	                        &lt;img src="images/icons/tickIcon.png" class="floatLeft"&gt;&lt;/img&gt;
+	                        &lt;label&gt;Confirm&lt;/label&gt;
+	                    &lt;/button&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- cancel按钮 -->
+					<div class="cancelButtonArea">
+						<form>
+							<button class="cancelButton button EN_L">
+								<img src="images/icons/crossIcon.png" class="floatLeft"></img>
+								<label>Cancel</label>
+							</button>
+						</form>
+					</div>
+					<!-- cancel按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="cancelButtonArea"&gt;
+	                &lt;form&gt;
+	                    &lt;button class="cancelButton button EN_L"&gt;
+	                        &lt;img src="images/icons/crossIcon.png" class="floatLeft"&gt;&lt;/img&gt;
+	                        &lt;label&gt;Cancel&lt;/label&gt;
+	                    &lt;/button&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- block按钮 -->
+					<div class="blockButtonArea">
+						<form>
+							<button class="blockButton button EN_L">
+								<img src="images/icons/blockIcon.png" class="floatLeft"></img>
+								<label>Block</label>
+							</button>
+						</form>
+					</div>
+					<!-- block按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="blockButtonArea"&gt;
+	                &lt;form&gt;
+	                    &lt;button class="blockButton button EN_L"&gt;
+	                        &lt;img src="images/icons/blockIcon.png" class="floatLeft"&gt;&lt;/img&gt;
+	                        &lt;label&gt;Block&lt;/label&gt;
+	                    &lt;/button&gt;
+	                &lt;/form&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- add按钮 -->
+					<div class="addButtonArea">
+						<form>
+							<button class="addButton button EN_L">
+								<img src="images/icons/plusIcon.png" class="floatLeft"></img>
+								<label>Add new</label>
+							</button>
+						</form>
+					</div>
+					<!-- add按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="addButtonArea"&gt;
+	                &lt;form&gt;
+	                    &lt;button class="addButton button EN_L"&gt;
+	                        &lt;img src="images/icons/plusIcon.png" class="floatLeft"&gt;&lt;/img&gt;
+	                        &lt;label&gt;Add new&lt;/label&gt;
+	                    &lt;/button&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 日期选择器 -->
+					<div class="dateButtonArea">
+						<form>
+							<button class="dateButton button EN_L">
+								<img src="images/icons/calenderIcon.png" class="floatLeft"></img>
+								<label>Date picker</label>
+							</button>
+						</form>
+					</div>
+					<!-- 日期选择器 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="dateButtonArea"&gt;
+	                &lt;form&gt;
+	                    &lt;button class="dateButton button EN_L"&gt;
+	                        &lt;img src="images/icons/calenderIcon.png" class="floatLeft"&gt;&lt;/img&gt;
+	                        &lt;label&gt;Date picker&lt;/label&gt;
+	                    &lt;/button&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 导航1 -->
+					<div class="navigator1Area">
+						<div class="navigator1">
+							<ul class="nav1 EN_L">
+								<li class="navTitle"><a href="#">Home</a></li>
+								<li class="navTitle centerLi"><a href="#">Latest articles</a></li>
+								<li class="navTitle centerLi"><a href="#">Latest events</a></li>
+								<li class="navTitle centerLi"><a href="#">Android apps</a></li>
+								<li class="navTitle centerLi"><a href="#">Freebies</a></li>
+							</ul>
+							<form class="navSearchBar">
+								<input type="submit" class="searchSubmit2 floatRight" value=""></input>
+								<input type="text" class="searchText floatRight CN_L" placeholder="Search"></input>
+							</form>
+						</div>
+					</div>
+					<!-- 导航1 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="navigator1Area"&gt;
+	            	&lt;div class="navigator1"&gt;
+	                    &lt;ul class="nav1 EN_L"&gt;
+	                        &lt;li class="navTitle"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle centerLi"&gt;&lt;a href="#"&gt;Latest articles&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle centerLi"&gt;&lt;a href="#"&gt;Latest events&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle centerLi"&gt;&lt;a href="#"&gt;Android apps&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle centerLi"&gt;&lt;a href="#"&gt;Freebies&lt;/a&gt;&lt;/li&gt;
+	                    &lt;/ul&gt;
+	                    &lt;form class="navSearchBar"&gt;
+	                        &lt;input type="submit" class="searchSubmit2 floatRight" value=""&gt;&lt;/input&gt;
+	                        &lt;input type="text" class="searchText floatRight CN_L" placeholder="Search"&gt;&lt;/input&gt;
+	                    &lt;/form&gt;
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 导航搜索 -->
+					<div class="navigatorSearchArea">
+						<div class="navigatorSearch">
+							<form class="navSearchBar floatLeft">
+								<input type="text" class="searchText floatLeft CN_L" placeholder="Search"></input>
+								<input type="submit" class="searchSubmit2 floatLeft" value=""></input>
+							</form>
+							<button class="otherButton floatRight"></button>
+						</div>
+					</div>
+					<!-- 导航搜索 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="navigatorSearchArea"&gt;
+	                &lt;div class="navigatorSearch"&gt;
+	                    &lt;form class="navSearchBar floatLeft"&gt;
+	                        &lt;input type="text" class="searchText floatLeft CN_L" placeholder="Search"&gt;&lt;/input&gt;
+	                        &lt;input type="submit" class="searchSubmit2 floatLeft" value=""&gt;&lt;/input&gt;
+	                    &lt;/form&gt;
+	                    &lt;button class="otherButton floatRight"&gt;&lt;/button&gt;
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 导航2 -->
+					<div class="navigator2Area">
+						<div class="navigator2">
+							<ul class="nav2 EN_M">
+								<li class="navTitle"><a href="#">Home</a></li>
+								<li class="navTitle"><a href="#">Latest articles</a></li>
+								<li class="navTitle"><a href="#">Latest events</a></li>
+								<li class="navTitle"><a href="#">Android apps</a>
+									<ul class="navList1">
+										<li class="listItem1"><a href="#">Camera Apps</a></li>
+										<li class="listItem1"><a href="#">Social media apps</a>
+											<ul class="navList2">
+												<li class="listItem2"><a href="#"><img src="images/appicons/appIcon_fb.png"/>Facebook Apps</a></li>
+												<li class="listItem2"><a href="#"><img src="images/appicons/appIcon_twitter.png"/>Twitter Apps</a></li>
+												<li class="listItem2"><a href="#"><img src="images/appicons/appIcon_youtube.png"/>Youtube Apps</a></li>
+												<li class="listItem2"><a href="#"><img src="images/appicons/appIcon_dribbble.png"/>Dribbble Apps</a></li>
+												<li class="listItem2"><a href="#"><img src="images/appicons/appIcon_other.png"/>Other Socials</a></li>
+											</ul>
+										</li>
+										<li class="listItem1"><a href="#">Free Games</a></li>
+										<li class="listItem1"><a href="#">Browser</a></li>
+										<li class="listItem1"><a href="#">Navigater apps</a></li>
+									</ul>
+								</li>
+								<li class="navTitle"><a href="#">Freebies</a></li>
+								<li class="navTitle"></li>
+							</ul>
+							<form class="navSearchBar2 floatRight">
+								<input type="submit" class="searchSubmit2 floatRight" value=""></input>
+								<input type="text" class="searchText floatRight CN_L"></input>
+							</form>
+						</div>
+					</div>
+					<!-- 导航2 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="navigator2Area"&gt;
+	            	&lt;div class="navigator2"&gt;
+	                    &lt;ul class="nav2 EN_M"&gt;
+	                        &lt;li class="navTitle"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle"&gt;&lt;a href="#"&gt;Latest articles&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle"&gt;&lt;a href="#"&gt;Latest events&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle"&gt;&lt;a href="#"&gt;Android apps&lt;/a&gt;
+	                            &lt;ul class="navList1"&gt;
+	                                &lt;li class="listItem1"&gt;&lt;a href="#"&gt;Camera Apps&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem1"&gt;&lt;a href="#"&gt;Social media apps&lt;/a&gt;
+	                                    &lt;ul class="navList2"&gt;
+	                                        &lt;li class="listItem2"&gt;&lt;a href="#"&gt;&lt;img src="images/appicons/appIcon_fb.png"/&gt;Facebook Apps&lt;/a&gt;&lt;/li&gt;
+	                                        &lt;li class="listItem2"&gt;&lt;a href="#"&gt;&lt;img src="images/appicons/appIcon_twitter.png"/&gt;Twitter Apps&lt;/a&gt;&lt;/li&gt;
+	                                        &lt;li class="listItem2"&gt;&lt;a href="#"&gt;&lt;img src="images/appicons/appIcon_youtube.png"/&gt;Youtube Apps&lt;/a&gt;&lt;/li&gt;
+	                                        &lt;li class="listItem2"&gt;&lt;a href="#"&gt;&lt;img src="images/appicons/appIcon_dribbble.png"/&gt;Dribbble Apps&lt;/a&gt;&lt;/li&gt;
+	                                        &lt;li class="listItem2"&gt;&lt;a href="#"&gt;&lt;img src="images/appicons/appIcon_other.png"/&gt;Other Socials&lt;/a&gt;&lt;/li&gt;
+	                                    &lt;/ul&gt;
+	                                &lt;/li&gt;
+	                                &lt;li class="listItem1"&gt;&lt;a href="#"&gt;Free Games&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem1"&gt;&lt;a href="#"&gt;Browser&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem1"&gt;&lt;a href="#"&gt;Navigater apps&lt;/a&gt;&lt;/li&gt;
+	                            &lt;/ul&gt;
+	                        &lt;/li&gt;
+	                        &lt;li class="navTitle"&gt;&lt;a href="#"&gt;Freebies&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="navTitle"&gt;&lt;/li&gt;
+	                    &lt;/ul&gt;
+	                    &lt;form class="navSearchBar2 floatRight"&gt;
+	                        &lt;input type="submit" class="searchSubmit2 floatRight" value=""&gt;&lt;/input&gt;
+	                        &lt;input type="text" class="searchText floatRight CN_L"&gt;&lt;/input&gt;
+	                    &lt;/form&gt;
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView" style="height:500px;">
+					<!-- 导航3 -->
+					<div class="navigator3Area">
+						<div class="navigator3 EN_L">
+							<ul class="navList3">
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_03.png"/><span class="floatLeft">Latest Articles</span></a></li>
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_06.png"/><span class="floatLeft">Popular Comments</span></a></li>
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_09.png"/><span class="floatLeft">Latest Events</span></a></li>
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_13.png"/><span class="floatLeft">HTML 5</span></a></li>
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_17.png"/><span class="floatLeft">Android Apps</span></a></li>
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_19.png"/><span class="floatLeft">Website Usage</span></a>
+									<ul class="navList4">
+										<li class="listItem4"><a href="#">Facebook Apps</a></li>
+										<li class="listItem4"><a href="#">Twitter Apps</a></li>
+										<li class="listItem4"><a href="#">Youtube Apps</a></li>
+										<li class="listItem4"><a href="#">Dribbble Apps</a></li>
+										<li class="listItem4"><a href="#">Other Socials</a></li>
+									</ul>
+								</li>
+								<li class="listItem3"><a href="#"><span class="colorBlock"></span><img class="floatLeft" src="images/appicons/appIcon_21.png"/><span class="floatLeft">Email Address</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 导航3 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="navigator3Area"&gt;
+	            	&lt;div class="navigator3 EN_L"&gt;
+	                    &lt;ul class="navList3"&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_03.png"/&gt;&lt;span class="floatLeft"&gt;Latest Articles&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_06.png"/&gt;&lt;span class="floatLeft"&gt;Popular Comments&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_09.png"/&gt;&lt;span class="floatLeft"&gt;Latest Events&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_13.png"/&gt;&lt;span class="floatLeft"&gt;HTML 5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_17.png"/&gt;&lt;span class="floatLeft"&gt;Android Apps&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_19.png"/&gt;&lt;span class="floatLeft"&gt;Website Usage&lt;/span&gt;&lt;/a&gt;
+	                            &lt;ul class="navList4"&gt;
+	                                &lt;li class="listItem4"&gt;&lt;a href="#"&gt;Facebook Apps&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem4"&gt;&lt;a href="#"&gt;Twitter Apps&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem4"&gt;&lt;a href="#"&gt;Youtube Apps&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem4"&gt;&lt;a href="#"&gt;Dribbble Apps&lt;/a&gt;&lt;/li&gt;
+	                                &lt;li class="listItem4"&gt;&lt;a href="#"&gt;Other Socials&lt;/a&gt;&lt;/li&gt;
+	                            &lt;/ul&gt;
+	                        &lt;/li&gt;
+	                        &lt;li class="listItem3"&gt;&lt;a href="#"&gt;&lt;span class="colorBlock"&gt;&lt;/span&gt;&lt;img class="floatLeft" src="images/appicons/appIcon_21.png"/&gt;&lt;span class="floatLeft"&gt;Email Address&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	                    &lt;/ul&gt;
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView2">
+					<!--profile picture -->
+					<div class="profilePictureArea">
+						<div class="profilePicture">
+							<input data-role="none" class="selectPic" type="file" accept="image/*"/>
+							<div class="noProfilePic"></div>
+							<p class="EN_L">No Profile Picture</p>
+						</div>
+					</div>
+					<!--profile picture -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="profilePictureArea"&gt;
+		                &lt;div class="profilePicture"&gt;
+		                    &lt;input data-role="none" class="selectPic" type="file" accept="image/*"/&gt;
+		                    &lt;div class="noProfilePic"&gt;&lt;/div&gt;
+		                    &lt;p class="EN_L"&gt;No Profile Picture&lt;/p&gt;
+		                &lt;/div&gt;
+		        &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 面包屑 -->
+					<div class="breadcrumb">
+						<ul>
+							<li> <span class="digit">1</span><a href="#" target="_self">My Cart</a><span class="front"> </span> </li>
+							<li> <span class="back"></span><span class="digit">2</span><a href="#"> Enter Datails</a> <span class="front"></span> </li>
+							<li> <span class="back"></span><span class="digit">3</span><a href="#">Checkout</a> <span class="front"> </span> </li>
+							<li> <span class="back"></span><span class="digit">4</span><a href="#">Thank you</a> </li>
+						</ul>
+					</div>
+					<!-- 面包屑 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="breadcrumb"&gt;
+	                &lt;ul&gt;
+	                	&lt;li&gt; &lt;span class="digit"&gt;1&lt;/span&gt;&lt;a href="#" target="_self"&gt;My Cart&lt;/a&gt;&lt;span class="front"&gt; &lt;/span&gt; &lt;/li&gt;
+	                	&lt;li&gt; &lt;span class="back"&gt;&lt;/span&gt;&lt;span class="digit"&gt;2&lt;/span&gt;&lt;a href="#"&gt; Enter Datails&lt;/a&gt; &lt;span class="front"&gt;&lt;/span&gt; &lt;/li&gt;
+	                	&lt;li&gt; &lt;span class="back"&gt;&lt;/span&gt;&lt;span class="digit"&gt;3&lt;/span&gt;&lt;a href="#"&gt;Checkout&lt;/a&gt; &lt;span class="front"&gt; &lt;/span&gt; &lt;/li&gt;
+	                	&lt;li&gt; &lt;span class="back"&gt;&lt;/span&gt;&lt;span class="digit"&gt;4&lt;/span&gt;&lt;a href="#"&gt;Thank you&lt;/a&gt; &lt;/li&gt;
+	                &lt;/ul&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 弹出层1 -->
+					<div class="popUp1">
+						<button class="closeButton">×</button>
+						<div class="noPhotoPic"></div>
+						<p class="mainInfo">No Photo Detected</p>
+						<p class="detailInfo EN_S">Dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+					</div>
+					<!-- 弹出层1 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="popUp1"&gt;
+                    &lt;button class="closeButton"&gt;×&lt;/button&gt;
+                    &lt;div class="noPhotoPic"&gt;&lt;/div&gt;
+                    &lt;p class="mainInfo"&gt;No Photo Detected&lt;/p&gt;
+                    &lt;p class="detailInfo EN_S"&gt;Dummy text ever since the 1500s, when an unknown printer took a galley of type&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 弹出层2 -->
+					<div class="popUp2">
+						<button class="closeButton">×</button>
+						<div class="downloadingPic"></div>
+						<p class="mainInfo">Downloading</p>
+						<p class="detailInfo EN_S">Dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+					</div>
+					<!-- 弹出层2 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="popUp2"&gt;
+                    &lt;button class="closeButton"&gt;×&lt;/button&gt;
+                    &lt;div class="downloadingPic"&gt;&lt;/div&gt;
+                    &lt;p class="mainInfo"&gt;Downloading&lt;/p&gt;
+                    &lt;p class="detailInfo EN_S"&gt;Dummy text ever since the 1500s, when an unknown printer took a galley of type&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class = "element">
+				<div class = "displayView">
+					<!-- dashboard -->
+					<div class = "dashboard">
+                    <span class="dashboardItem">
+                        <a class="dashboardBtn" href="#"><img src="images/icons/dashboard_06.png"/></a>
+                        <div class="dashboardDesc">
+                            <div class = "popUpTriangle">&nbsp;</div>
+                            <div class="popUpText">
+                                <p class="descIndex">02</p>
+                                <p class="descDetail EN_M">Lorem Ipsm simply dummy</p>
+                            </div>
+                        </div>
+                    </span>
+						<span class="dashboardItem">
+                        <a class="dashboardBtn" href="#"><img src="images/icons/dashboard_03.png"/></a>
+                    </span>
+						<button class="dashboardAdd" onClick='appendDashboardItem("#","images/icons/dashboard_06.png");'></button>
+					</div>
+					<!-- dashboard -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class = "dashboard"&gt;
+                    &lt;span class="dashboardItem"&gt;
+                        &lt;a class="dashboardBtn" href="#"&gt;&lt;img src="images/icons/dashboard_06.png"/&gt;&lt;/a&gt;
+                        &lt;div class="dashboardDesc"&gt;
+                            &lt;div class = "popUpTriangle"&gt;&amp;nbsp;&lt;/div&gt;
+                            &lt;div class="popUpText"&gt;
+                                &lt;p class="descIndex"&gt;02&lt;/p&gt;
+                                &lt;p class="descDetail EN_M"&gt;Lorem Ipsm simply dummy&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/span&gt;
+                    &lt;span class="dashboardItem"&gt;
+                        &lt;a class="dashboardBtn" href="#"&gt;&lt;img src="images/icons/dashboard_03.png"/&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                   &lt;button class="dashboardAdd" onClick='appendDashboardItem("#","images/icons/dashboard_06.png");'&gt;&lt;/button&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class = "element">
+				<div class = "displayView">
+					<!-- 开关按钮 -->
+					<div class = "switchButton">
+						<input type="checkbox" id = "switch">
+						<label for = "switch">
+							<span></span>
+						</label>
+					</div>
+					<!-- 开关按钮 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class = "switchButton"&gt;
+                    &lt;input type="checkbox" id = "switch"&gt;
+                    &lt;label for = "switch"&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 单选按钮1 -->
+					<div class="radio1Area">
+						<form class="radio1">
+							<div class="radioFull">
+								<input type="radio"  id="option1" name="option" checked />
+								<label for="option1"></label>
+							</div>
+							<label >OPTION #1</label>
+							&nbsp;&nbsp;
+							<div class="radioFull">
+								<input type="radio"  id="option2" name="option" />
+								<label for="option2"></label>
+							</div>
+							<label >OPTION #2</label>
+						</form>
+					</div>
+					<!-- 单选按钮1 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="radio1Area"&gt;
+	                &lt;form class="radio1"&gt;
+	                    &lt;div class="radioFull"&gt;
+	                        &lt;input type="radio"  id="option1" name="option" checked /&gt;
+	                         &lt;label for="option1"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label &gt;OPTION #1&lt;/label&gt;
+	                    &amp;nbsp;&amp;nbsp;
+	                    &lt;div class="radioFull"&gt;
+	                        &lt;input type="radio"  id="option2" name="option" /&gt;
+	                         &lt;label for="option2"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label &gt;OPTION #2&lt;/label&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 单选按钮2 -->
+					<div class="radio2Area">
+						<form class="radio2">
+							<div class="radioDot">
+								<input type="radio"  id="option#1" name="option" checked />
+								<label for="option#1"></label>
+							</div>
+							<label >OPTION #1</label>
+							&nbsp;&nbsp;
+							<div class="radioDot">
+								<input type="radio"  id="option#2" name="option" />
+								<label for="option#2"></label>
+							</div>
+							<label >OPTION #2</label>
+						</form>
+					</div>
+					<!-- 单选按钮2 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="radio2Area"&gt;
+	                &lt;form class="radio2"&gt;
+	                      &lt;div class="radioDot"&gt;
+	                        &lt;input type="radio"  id="option#1" name="option" checked /&gt;
+	                         &lt;label for="option#1"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label &gt;OPTION #1&lt;/label&gt;
+	                    &amp;nbsp;&amp;nbsp;
+	                    &lt;div class="radioDot"&gt;
+	                        &lt;input type="radio"  id="option#2" name="option" /&gt;
+	                         &lt;label for="option#2"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label &gt;OPTION #2&lt;/label&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 多选按钮1 -->
+					<div class="checkbox1Area">
+						<form class="checkbox1">
+							<div class="checkboxFull">
+								<input type="checkbox"  id="male1" name="sex1" checked />
+								<label for="male1"></label>
+							</div>
+							<label>MALE</label>
+							&nbsp;&nbsp;
+							<div class="checkboxFull">
+								<input type="checkbox"  id="female1" name="sex1" />
+								<label for="female1"></label>
+							</div>
+							<label>FEMALE</label>
+						</form>
+					</div>
+					<!-- 多选按钮1 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="checkbox1Area"&gt;
+	                &lt;form class="checkbox1"&gt;
+	                    &lt;div class="checkboxFull"&gt;
+	                        &lt;input type="checkbox"  id="male1" name="sex1" checked /&gt;
+	                        &lt;label for="male1"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label&gt;MALE&lt;/label&gt;
+	                    &amp;nbsp;&amp;nbsp;
+	                     &lt;div class="checkboxFull"&gt;
+	                        &lt;input type="checkbox"  id="female1" name="sex1" /&gt;
+	                        &lt;label for="female1"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label&gt;FEMALE&lt;/label&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 多选按钮2 -->
+					<div class="checkbox2Area">
+						<form class="checkbox2">
+							<div class="checkboxDot">
+								<input type="checkbox"  id="male" name="sex" checked />
+								<label for="male"></label>
+							</div>
+							<label>MALE</label>
+							&nbsp;&nbsp;
+							<div class="checkboxDot">
+								<input type="checkbox"  id="female" name="sex" />
+								<label for="female"></label>
+							</div>
+							<label>FEMALE</label>
+						</form>
+					</div>
+					<!-- 多选按钮2 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="checkbox2Area"&gt;
+	                &lt;form class="checkbox2"&gt;
+	                    &lt;div class="checkboxDot"&gt;
+	                        &lt;input type="checkbox"  id="male" name="sex" checked /&gt;
+	                        &lt;label for="male"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label&gt;MALE&lt;/label&gt;
+	                    &amp;nbsp;&amp;nbsp;
+	                     &lt;div class="checkboxDot"&gt;
+	                        &lt;input type="checkbox"  id="female" name="sex" /&gt;
+	                        &lt;label for="female"&gt;&lt;/label&gt;
+	                    &lt;/div&gt;
+	                    &lt;label&gt;FEMALE&lt;/label&gt;
+	                &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 页码 1-->
+					<div class="page_mark1">
+						<a class="arrowhead"><</a>
+						<a class="pageNum currentPage" href="#?page=1">1</a>
+						<a class="pageNum" href="#?page=2">2</a>
+						<a class="pageNum" href="#?page=3">3</a>
+						<a class="pageNum" href="#?page=4">4</a>
+						<a class="arrowtail">></a>
+					</div>
+					<!-- 页码 1-->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="page_mark1"&gt;
+                    &lt;a class="arrowhead"&gt;&lt;&lt;/a&gt;
+                    &lt;a class="pageNum currentPage" href="#?page=1"&gt;1&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=2"&gt;2&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=3"&gt;3&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=4"&gt;4&lt;/a&gt;
+                    &lt;a class="arrowtail"&gt;&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 页码2 -->
+					<div class="page_mark2">
+						<a class="arrowhead"><</a>
+						<a class="pageNum currentPage" href="#?page=1">1</a>
+						<a class="pageNum" href="#?page=2">2</a>
+						<a class="pageNum" href="#?page=3">3</a>
+						<a class="pageNum" href="#?page=4">4</a>
+						<a class="arrowtail">></a>
+					</div>
+					<!-- 页码 2-->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="page_mark2"&gt;
+                    &lt;a class="arrowhead"&gt;&lt;&lt;/a&gt;
+                    &lt;a class="pageNum currentPage" href="#?page=1"&gt;1&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=2"&gt;2&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=3"&gt;3&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=4"&gt;4&lt;/a&gt;
+                    &lt;a class="arrowtail"&gt;&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 页码3 -->
+					<div class="page_mark3">
+						<a class="arrowhead"><</a>
+						<a class="pageNum" href="#?page=1"><label></label></a>
+						<a class="pageNum" href="#?page=2"><label></label></a>
+						<a class="pageNum currentPage"  href="#?page=3"><label></label></a>
+						<a class="pageNum" href="#?page=4"><label></label></a>
+						<a class="pageNum" href="#?page=5"><label></label></a>
+						<a class="pageNum" href="#?page=6"><label></label></a>
+						<a class="arrowtail">></a>
+					</div>
+					<!-- 页码3 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="page_mark3"&gt;
+                    &lt;a class="arrowhead"&gt;&lt;&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=1"&gt;&lt;label&gt;&lt;/label&gt;&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=2"&gt;&lt;label&gt;&lt;/label&gt;&lt;/a&gt;
+                    &lt;a class="pageNum currentPage"  href="#?page=3"&gt;&lt;label&gt;&lt;/label&gt;&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=4"&gt;&lt;label&gt;&lt;/label&gt;&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=5"&gt;&lt;label&gt;&lt;/label&gt;&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=6"&gt;&lt;label&gt;&lt;/label&gt;&lt;/a&gt;
+                    &lt;a class="arrowtail"&gt;&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 页码4 -->
+					<div class="page_mark4">
+						<a class="arrowhead">< Prev</a>
+						<a class="pageNum currentPage"  href="#?page=1">1</a>
+						<a class="pageNum" href="#?page=2">2</a>
+						<a class="pageNum" href="#?page=3">3</a>
+						<a class="pageNum" href="#?page=4">4</a>
+						<a class="pageNum" href="#?page=5">5</a>
+						<a class="pageNum" href="#?page=6">6</a>
+						<a class="pageNum" href="#?page=7">7</a>
+						<a class="arrowtail">Next ></a>
+					</div>
+					<!-- 页码4 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="page_mark4"&gt;
+                    &lt;a class="arrowhead"&gt;&lt; Prev&lt;/a&gt;
+                    &lt;a class="pageNum currentPage"  href="#?page=1"&gt;1&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=2"&gt;2&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=3"&gt;3&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=4"&gt;4&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=5"&gt;5&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=6"&gt;6&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=7"&gt;7&lt;/a&gt;
+                    &lt;a class="arrowtail"&gt;Next &gt;&lt;/a&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 页码 5-->
+					<div class="page_mark5">
+						<a class="arrowhead">< Prev</a>
+						<a class="pageNum" href="#?page=1">1</a>
+						<a class="pageNum" href="#?page=2">2</a>
+						<a class="pageNum currentPage">3</span>
+							<a class="pageNum" href="#?page=4">4</a>
+							<a class="pageNum" href="#?page=5">5</a>
+							<a class="pageNum" href="#?page=6">6</a>
+							<a class="pageNum" href="#?page=7">7</a>
+							<a class="arrowtail">Next ></a>
+					</div>
+					<!-- 页码 5-->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="page_mark5"&gt;
+                    &lt;a class="arrowhead"&gt;&lt; Prev&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=1"&gt;1&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=2"&gt;2&lt;/a&gt;
+                    &lt;a class="pageNum currentPage"&gt;3&lt;/span&gt;
+                    &lt;a class="pageNum" href="#?page=4"&gt;4&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=5"&gt;5&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=6"&gt;6&lt;/a&gt;
+                    &lt;a class="pageNum" href="#?page=7"&gt;7&lt;/a&gt;
+                    &lt;a class="arrowtail"&gt;Next &gt;&lt;/a&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- warning1 -->
+					<div class="warningStyleOne">
+						<div class="closeOne floatRight"></div>
+						<p class="warningTitle EN_LL" style="color:#7e8d8b;">This is a warning</p>
+						<p class="warningContent EN_M" style="color:#9b9b9b;">Here is the warning content. Here is the warning content.</p>
+					</div>
+					<!-- warning1 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="warningStyleOne"&gt;
+                    &lt;div class="closeOne floatRight"&gt;&lt;/div&gt;
+                    &lt;p class="warningTitle EN_LL" style="color:#7e8d8b;"&gt;This is a warning&lt;/p&gt;
+                    &lt;p class="warningContent EN_M" style="color:#9b9b9b;"&gt;Here is the warning content. Here is the warning content.&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- warning2 -->
+					<div class="warningStyleTwo">
+						<div class="closeOne floatRight"></div>
+						<div class="warningIcon floatLeft"></div>
+						<p class="warningTitle EN_LL" style="color:#7e8d8b;">This is a warning</p>
+						<p class="warningContent EN_M" style="color:#9b9b9b;">Here is the warning content. Here is the warning content.</p>
+					</div>
+					<!-- warning2 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="warningStyleTwo"&gt;
+                    &lt;div class="closeOne floatRight"&gt;&lt;/div&gt;
+                    &lt;div class="warningIcon floatLeft"&gt;&lt;/div&gt;
+                    &lt;p class="warningTitle EN_LL" style="color:#7e8d8b;"&gt;This is a warning&lt;/p&gt;
+                    &lt;p class="warningContent EN_M" style="color:#9b9b9b;"&gt;Here is the warning content. Here is the warning content.&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- warning3 -->
+					<div class="warningStyleThree">
+						<div class="closeTwo floatRight"></div>
+						<div class="warningIcon floatLeft"></div>
+						<p class="warningTitle EN_LL" style="color:#ff9100;">This is a warning</p>
+						<p class="warningContent EN_M" style="color:#ff9100;">Here is the warning content. Here is the warning content.</p>
+					</div>
+					<!-- warning3 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="warningStyleThree"&gt;
+                    &lt;div class="closeTwo floatRight"&gt;&lt;/div&gt;
+                    &lt;div class="warningIcon floatLeft"&gt;&lt;/div&gt;
+                    &lt;p class="warningTitle EN_LL" style="color:#ff9100;"&gt;This is a warning&lt;/p&gt;
+                    &lt;p class="warningContent EN_M" style="color:#ff9100;"&gt;Here is the warning content. Here is the warning content.&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- warning4 -->
+					<div class="warningStyleFour">
+						<div class="closeOne floatRight"></div>
+						<div class="buttonInWarning floatRight button AddButton EN_L">Explore</div>
+						<p class="warningTitle EN_LL" style="color:#7e8d8b;">New Options Added</p>
+						<p class="warningContent EN_M" style="color:#9b9b9b;">Here is the warning content. Here is the warning content.Here is the warning content. Here is the warning content.Here is the warning content. Here is the warning content.</p>
+					</div>
+					<!-- warning4 -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="warningStyleFour"&gt;
+                    &lt;div class="closeOne floatRight"&gt;&lt;/div&gt;
+                    &lt;div class="buttonInWarning floatRight button AddButton EN_L"&gt;Explore&lt;/div&gt;
+                    &lt;p class="warningTitle EN_LL" style="color:#7e8d8b;"&gt;New Options Added&lt;/p&gt;
+                    &lt;p class="warningContent EN_M" style="color:#9b9b9b;"&gt;Here is the warning content. Here is the warning content.Here is the warning content. Here is the warning content.Here is the warning content. Here is the warning content.&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<div class="container">
+						<div class="ProgressBar" style="width:50%;"></div>
+					</div>
+					<div class="container2">
+						<div class="ProgressBar2" style="width:50%;"></div>
+					</div>
+					<div class="container3">
+						<div class="ProgressBar3" style="width:50%;"></div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+	        	&lt;div class="container"&gt;
+		        	&lt;div class="ProgressBar" style="width:50%;"&gt;&lt;/div&gt;
+	            &lt;/div&gt;
+	            &lt;div class="container2"&gt;
+		        	&lt;div class="ProgressBar2" style="width:50%;"&gt;&lt;/div&gt;
+	            &lt;/div&gt;
+	            &lt;div class="container3"&gt;
+		        	&lt;div class="ProgressBar3" style="width:50%;"&gt;&lt;/div&gt;
+	            &lt;/div&gt;
+	        </code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- footer -->
+					<div class="footer">
+						<div class="footerContent">
+							<ul class="footerContentGroup floatLeft">
+								<a href="#"><li class="groupTitle CN_L">中国工程科技知识中心</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">关于我们</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">加入我们</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">网站地图</li></a>
+							</ul>
+
+							<ul class="footerContentGroup floatLeft">
+								<a href="#"><li class="groupTitle CN_L">服务与支持</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">注册服务条款</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">意见反馈</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">版权声明</li></a>
+							</ul>
+
+							<ul class="footerContentGroup floatLeft">
+								<a href="#"><li class="groupTitle CN_L">用户中心</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">常见问题</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">登录注册</li></a>
+							</ul>
+
+							<ul class="footerContentGroup floatLeft">
+								<a href="#"><li class="groupTitle CN_L">邮政信箱：北京8068信箱</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">邮编：100088</li></a>
+								<a href="#"><li class="groupSubtitle CN_M">服务热线：010 —×××××××</li></a>
+							</ul>
+
+							<ul class="links floatLeft CN_M">
+								<li>友情链接：</li>
+								<a href="#"><li>链接1</li></a>
+								<a href="#"><li>链接2</li></a>
+								<a href="#"><li>链接3</li></a>
+								<a href="#"><li>链接4</li></a>
+								<a href="#"><li>链接5</li></a>
+								<a href="#"><li>链接6</li></a>
+								<a href="#"><li>链接7</li></a>
+							</ul>
+
+							<ul class="address CN_M">
+								<li>地址：北京市西城区冰窖口胡同2号</li>
+								<li>Copyright by 中国工程院| ICP备案号：京ICP备05023557号</li>
+							</ul>
+						</div>
+					</div>
+					<!-- footer -->
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="footer"&gt;
+                    &lt;div class="footerContent"&gt;
+                        &lt;ul class="footerContentGroup floatLeft"&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupTitle CN_L"&gt;中国工程科技知识中心&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;关于我们&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;加入我们&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;网站地图&lt;/li&gt;&lt;/a&gt;
+                        &lt;/ul&gt;
+
+                        &lt;ul class="footerContentGroup floatLeft"&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupTitle CN_L"&gt;服务与支持&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;注册服务条款&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;意见反馈&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;版权声明&lt;/li&gt;&lt;/a&gt;
+                        &lt;/ul&gt;
+
+                        &lt;ul class="footerContentGroup floatLeft"&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupTitle CN_L"&gt;用户中心&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;常见问题&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;登录注册&lt;/li&gt;&lt;/a&gt;
+                        &lt;/ul&gt;
+
+                        &lt;ul class="footerContentGroup floatLeft"&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupTitle CN_L"&gt;邮政信箱：北京8068信箱&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;邮编：100088&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li class="groupSubtitle CN_M"&gt;服务热线：010 —×××××××&lt;/li&gt;&lt;/a&gt;
+                        &lt;/ul&gt;
+
+                        &lt;ul class="links floatLeft CN_M"&gt;
+                            &lt;li&gt;友情链接：&lt;/li&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接1&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接2&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接3&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接4&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接5&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接6&lt;/li&gt;&lt;/a&gt;
+                            &lt;a href="#"&gt;&lt;li&gt;链接7&lt;/li&gt;&lt;/a&gt;
+                        &lt;/ul&gt;
+
+                        &lt;ul class="address CN_M"&gt;
+                            &lt;li&gt;地址：北京市西城区冰窖口胡同2号&lt;/li&gt;
+                            &lt;li&gt;Copyright by 中国工程院| ICP备案号：京ICP备05023557号&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<!--小雪改动的部分开始-->
+			<div class="element">
+				<!--SLIDER -->
+				<div class="displayView2">
+					<div class="Slider">
+						<div class="EN_T">SLIDERS </div>
+						<div class="InputSlider1">
+							<input id="range1" type="range" value="0" min="0" max="100" onchange="slider1change()">
+						</div>
+						<div class="InputSlider2">
+							<input id="range2" type="range" value="0" min="0" max="100" onchange="slider2change()">
+							<div class="SliderValue" id="slidervalue">
+								<p class="EN_L">0%</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--SLIDER-->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="Slider"&gt;
+            		&lt;div class="EN_T"&gt;SLIDERS &lt;/div&gt;
+            		&lt;div class="InputSlider1"&gt;
+              			&lt;input id="range1" type="range" value="0" min="0" max="100" onchange="slider1change()"&gt;
+            		&lt;/div&gt;
+            		&lt;div class="InputSlider2"&gt;
+              			&lt;input id="range2" type="range" value="0" min="0" max="100" onchange="slider2change()"&gt;
+              			&lt;div class="SliderValue" id="slidervalue"&gt;
+                			&lt;p class="EN_L"&gt;0%&lt;/p&gt;
+              			&lt;/div&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+				<pre><p>javascript代码如下：</p><code class="language-javascript">
+            	&lt;script type="text/javascript"&gt;
+			function slider1change(){
+        		var slider1=document.getElementById("range1");
+        		slider1.style.background = "linear-gradient(to right, #5e5f69, #5e5f69 " + slider1.value + "%, #858691 " + slider1.value + "%, #858691)";
+        	}
+
+        	function slider2change(){
+        		var slider2=document.getElementById("range2");
+        		var location = document.getElementById("slidervalue");
+        		var value = location.getElementsByTagName("p")[0];
+
+        		value.innerHTML = slider2.value + "%";
+        		slider2.style.background = "linear-gradient(to right, #0291d3, #0291d3 " + slider2.value + "%, #30b7f4 " + slider2.value + "%, #30b7f4)";
+        		location.style.position = "relative";
+        		location.style.left = (slider2.value-5) + "%";
+        	}
+		&lt;/script&gt;
+            </code></pre>
+			</div>
+
+			<script type="text/javascript">
+                function slider1change(){
+                    var slider1=document.getElementById("range1");
+                    slider1.style.background = "linear-gradient(to right, #5e5f69, #5e5f69 " + slider1.value + "%, #858691 " + slider1.value + "%, #858691)";
+                }
+
+                function slider2change(){
+                    var slider2=document.getElementById("range2");
+                    var location = document.getElementById("slidervalue");
+                    var value = location.getElementsByTagName("p")[0];
+
+                    value.innerHTML = slider2.value + "%";
+                    slider2.style.background = "linear-gradient(to right, #0291d3, #0291d3 " + slider2.value + "%, #30b7f4 " + slider2.value + "%, #30b7f4)";
+                    location.style.position = "relative";
+                    location.style.left = (slider2.value-5) + "%";
+                }
+			</script>
+
+			<div class="element">
+				<!--Rate by Star-->
+				<div class="displayView2">
+					<div class="Rating">
+						<div class="EN_T">RATING BY STAR</div>
+						<div  class="RateWrapper floatLeft">
+							<a href="javascript:;" class="star"></a>
+							<a href="javascript:;" class="star"></a>
+							<a href="javascript:;" class="star"></a>
+							<a href="javascript:;" class="star"></a>
+							<a href="javascript:;" class="star"></a>
+							<div class="RateText">
+								<p class="EN_L floatRight">Please Rate</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Rate by Star-->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="Rating"&gt;
+	            	&lt;div class="EN_T"&gt;RATING BY STAR&lt;/div&gt;
+	            	&lt;div  class="RateWrapper floatLeft"&gt;
+	                	&lt;a href="javascript:;" class="star"&gt;&lt;/a&gt;
+	                	&lt;a href="javascript:;" class="star"&gt;&lt;/a&gt;
+	                	&lt;a href="javascript:;" class="star"&gt;&lt;/a&gt;
+	                	&lt;a href="javascript:;" class="star"&gt;&lt;/a&gt;
+	                	&lt;a href="javascript:;" class="star"&gt;&lt;/a&gt;
+	                	&lt;div class="RateText"&gt;
+	                    	&lt;p class="EN_L floatRight"&gt;Please Rate&lt;/p&gt;
+	                	&lt;/div&gt;
+					&lt;/div&gt;
+            	&lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--Rate by Heart-->
+				<div class="displayView2">
+					<div class="Rating">
+						<div class="EN_T">RATING BY HEART</div>
+						<div class="RateWrapper floatLeft">
+							<a href="javascript:;" class="heart"></a>
+							<a href="javascript:;" class="heart"></a>
+							<a href="javascript:;" class="heart"></a>
+							<a href="javascript:;" class="heart"></a>
+							<a href="javascript:;" class="heart"></a>
+							<div class="RateText">
+								<p id=""class="EN_L floatRight">Please Rate</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Rate by Heart-->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="Rating"&gt;
+		            &lt;div class="EN_T"&gt;RATING BY HEART&lt;/div&gt;
+		            &lt;div class="RateWrapper floatLeft"&gt;
+		                &lt;a href="javascript:;" class="heart"&gt;&lt;/a&gt;
+		                &lt;a href="javascript:;" class="heart"&gt;&lt;/a&gt;
+		                &lt;a href="javascript:;" class="heart"&gt;&lt;/a&gt;
+		                &lt;a href="javascript:;" class="heart"&gt;&lt;/a&gt;
+		                &lt;a href="javascript:;" class="heart"&gt;&lt;/a&gt;
+		                &lt;div class="RateText"&gt;
+		                	&lt;p id=""class="EN_L floatRight"&gt;Please Rate&lt;/p&gt;
+		                &lt;/div&gt;
+					&lt;/div&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--SelectCategory -->
+				<div class="displayView2">
+					<div class="SelectCategory">
+						<div class="CategoryMenue EN_L">
+							<div class="CateMenTitle">
+								<div id="a" class="ddg" onclick="showList(this)"></div>
+								<p id="SelectCategory">Select&nbsp;Category</p>
+							</div>
+							<div id="dropdown-a" class = "dropdown-content">
+								<ul onClick="pchangeName(this)"><p class="EN_L">Latest articles</p></ul>
+								<ul onClick="pchangeName(this)"><p class="EN_L">Popular comments</p></ul>
+								<ul onClick="pchangeName(this)"><p class="EN_L">Popular articles</p></ul>
+							</div>
+						</div>
+						<form class="SelCateButCon">
+							<input type="submit" class="SelCateBut1 floatLeft" value="Submit me">
+							<input type="submit" class="SelCateBut2 floatRight" value="Cancel">
+						</form>
+					</div>
+				</div>
+				<!--SelectCategory-->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="SelectCategory"&gt;
+		            &lt;div class="CategoryMenue EN_L"&gt;
+			            &lt;div class="CateMenTitle"&gt;
+			            	&lt;div id="a" class="ddg" onclick="showList(this)"&gt;&lt;/div&gt;
+			            	&lt;p id="SelectCategory"&gt;Select&amp;nbsp;Category&lt;/p&gt;
+			            &lt;/div&gt;
+			            &lt;div id="dropdown-a" class = "dropdown-content"&gt;
+			                &lt;ul onClick="pchangeName(this)"&gt;&lt;p class="EN_L"&gt;Latest articles&lt;/p&gt;&lt;/ul&gt;
+			                &lt;ul onClick="pchangeName(this)"&gt;&lt;p class="EN_L"&gt;Popular comments&lt;/p&gt;&lt;/ul&gt;
+			                &lt;ul onClick="pchangeName(this)"&gt;&lt;p class="EN_L"&gt;Popular articles&lt;/p&gt;&lt;/ul&gt;
+			            &lt;/div&gt;
+		            &lt;/div&gt;
+		            &lt;form class="SelCateButCon"&gt;
+		            	&lt;input type="submit" class="SelCateBut1 floatLeft" value="Submit me"&gt;
+		            	&lt;input type="submit" class="SelCateBut2 floatRight" value="Cancel"&gt;
+		            &lt;/form&gt;
+	            &lt;/div&gt;
+            </code></pre>
+			</div>
+
+			<div class="element">
+				<!--AndroidAppMenu -->
+				<div class="displayView2">
+					<div class="AndroidAppMenu">
+						<div class="AndrAppMenu" id="AndroAppMenu"> ANDROID APPS - MENU <div id="b" class="ddb" onclick="showList(this)"></div></div>
+						<div id="dropdown-b" class="dropdown-content">
+							<div class="AndrAppMenuul1"></div><ul onClick="dchangeName(this)"> Business</ul>
+							<div class="AndrAppMenuul2"></div><ul onClick="dchangeName(this)"> Comics</ul>
+							<div class="AndrAppMenuul3"></div><ul onClick="dchangeName(this)"> Communication</ul>
+							<div class="AndrAppMenuul4"></div><ul onClick="dchangeName(this)"> Education</ul>
+							<div class="AndrAppMenuul5"></div><ul onClick="dchangeName(this)"> Entertainment</ul>
+						</div>
+					</div>
+				</div>
+				<!--AndroidAppMenu -->
+				<pre><p>html代码如下：</p><code class="language-html">
+            	&lt;div class="AndroidAppMenu"&gt;
+	            	&lt;div class="AndrAppMenu" id="AndroAppMenu"&gt; ANDROID APPS - MENU &lt;div id="b" class="ddb" onclick="showList(this)"&gt;&lt;/div&gt;&lt;/div&gt;
+		            &lt;div id="dropdown-b" class="dropdown-content"&gt;
+		                &lt;div class="AndrAppMenuul1"&gt;&lt;/div&gt;&lt;ul onClick="dchangeName(this)"&gt; Business&lt;/ul&gt;
+		                &lt;div class="AndrAppMenuul2"&gt;&lt;/div&gt;&lt;ul onClick="dchangeName(this)"&gt; Comics&lt;/ul&gt;
+		                &lt;div class="AndrAppMenuul3"&gt;&lt;/div&gt;&lt;ul onClick="dchangeName(this)"&gt; Communication&lt;/ul&gt;
+		                &lt;div class="AndrAppMenuul4"&gt;&lt;/div&gt;&lt;ul onClick="dchangeName(this)"&gt; Education&lt;/ul&gt;
+		                &lt;div class="AndrAppMenuul5"&gt;&lt;/div&gt;&lt;ul onClick="dchangeName(this)"&gt; Entertainment&lt;/ul&gt;
+		            &lt;/div&gt;
+	            &lt;/div&gt;
+            </code></pre>
+				<pre><p>javascript代码如下：</p><code class="language-javascript">
+        &lt;script type="text/javascript"&gt;
+        	function pchangeName(o){
+        		document.getElementById("SelectCategory").innerHTML = o.innerHTML;
+        	}
+        	function dchangeName(o){
+                document.getElementById("AndroAppMenu").innerHTML = o.innerHTML + '&lt;div id="b" class="ddb" onclick="showList(this)"&gt;&lt;/div&gt;';
+        	}
+        	function showList(o) {
+                hideList("dropdown-content" + o.id);
+                document.getElementById("dropdown-" + o.id).classList.toggle("show");
+        		if(o.id == "b")
+        		{
+        			var obj = document.getElementById("AndroAppMenu");
+					obj.style.backgroundColor = "white";
+        			obj.style.color = "black";
+        		}
+            }
+
+            function hideList(option) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+
+                for (var i = 0; i &lt; dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.id != option) {
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+
+        	window.onclick = function(e) {
+                if (!e.target.matches(".ddg")) {
+                    if (!e.target.matches(".ddb")) {
+                        hideList("");
+            			var obj = document.getElementById("AndroAppMenu");
+            			obj.style.backgroundColor = "#30b7f4";
+            			obj.style.color = "white";
+                	}
+                }
+            }
+        &lt;/script&gt;
+            </code></pre>
+			</div>
+
+			<script type="text/javascript">
+                function pchangeName(o){
+                    document.getElementById("SelectCategory").innerHTML = o.innerHTML;
+                }
+                function dchangeName(o){
+                    document.getElementById("AndroAppMenu").innerHTML = o.innerHTML + '<div id="b" class="ddb" onclick="showList(this)"></div>';
+                }
+                function showList(o) {
+                    hideList("dropdown-content" + o.id);
+                    document.getElementById("dropdown-" + o.id).classList.toggle("show");
+                    if(o.id == "b")
+                    {
+                        var obj = document.getElementById("AndroAppMenu");
+                        obj.style.backgroundColor = "white";
+                        obj.style.color = "black";
+                    }
+                }
+
+                function hideList(option) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.id != option) {
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+
+                window.onclick = function(e) {
+                    if (!e.target.matches(".ddg")) {
+                        if (!e.target.matches(".ddb")) {
+                            hideList("");
+                            var obj = document.getElementById("AndroAppMenu");
+                            obj.style.backgroundColor = "#30b7f4";
+                            obj.style.color = "white";
+                        }
+                    }
+                }
+			</script>
+			<!--小雪改动的部分结束-->
+
+			<div class="element">
+				<div class="displayView">
+					<div class="bannerArea2">
+						<div id="slider-1" class="bg-fff box-shadow radius">
+							<div class="slider">
+								<div class="bd bg-fff">
+									<ul>
+										<li><img src="images/banner/banner01.png"></a></li>
+										<li><img src="images/banner/banner02.png" ></a></li>
+										<li><img src="images/banner/banner03.png" ></a></li>
+										<li><img src="images/banner/banner04.png" ></a></li>
+									</ul>
+								</div>
+								<ol class="hd cl">
+									<li><i></i><img src="images/banner/banner01.png"></li>
+									<li><i></i><img src="images/banner/banner02.png"></li>
+									<li><i></i><img src="images/banner/banner03.png"></li>
+									<li><i></i><img src="images/banner/banner04.png"></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+				&lt;div class="bannerArea2"&gt;
+					&lt;div id="slider-1" class="bg-fff box-shadow radius"&gt;
+			    		&lt;div class="slider"&gt;
+			        		&lt;div class="bd bg-fff"&gt;
+			            		&lt;ul&gt;
+				                	&lt;li&gt;&lt;img src="images/banner/banner01.png" &gt;&lt;/a&gt;&lt;/li&gt;
+				                	&lt;li&gt;&lt;img src="images/banner/banner02.png" &gt;&lt;/a&gt;&lt;/li&gt;
+				                	&lt;li&gt;&lt;img src="images/banner/banner03.png" &gt;&lt;/a&gt;&lt;/li&gt;
+				                	&lt;li&gt;&lt;img src="images/banner/banner04.png" &gt;&lt;/a&gt;&lt;/li&gt;
+			            		&lt;/ul&gt;
+			        		&lt;/div&gt;
+			        		&lt;ol class="hd cl"&gt;
+			            		&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src="images/banner/banner01.png"&gt;&lt;/li&gt;
+			            		&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src="images/banner/banner02.png"&gt;&lt;/li&gt;
+			            		&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src="images/banner/banner03.png"&gt;&lt;/li&gt;
+			            		&lt;li&gt;&lt;i&gt;&lt;/i&gt;&lt;img src="images/banner/banner04.png"&gt;&lt;/li&gt;
+			        		&lt;/ol&gt;
+			    		&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+				<pre><p>javascript代码如下：</p><code class="language-javascript">
+		&lt;script type="text/javascript"&gt;
+			$(function(){
+    			jQuery("#slider-1 .slider").slide({
+    				mainCell:".bd ul",
+    				titCell:".hd li",
+    				trigger:"click",
+    				effect:"leftLoop",
+    				autoPlay:true,
+    				delayTime:850,
+    				interTime:5000,
+    				pnLoop:false,
+    				titOnClassName:"active"
+    			});
+			});
+		&lt;/script&gt;
+			</code></pre>
+			</div>
+
+
+			<script type="text/javascript">
+                $(function(){
+                    jQuery("#slider-1 .slider").slide({
+                        mainCell:".bd ul",
+                        titCell:".hd li",
+                        trigger:"click",
+                        effect:"leftLoop",
+                        autoPlay:true,
+                        delayTime:850,
+                        interTime:5000,
+                        pnLoop:false,
+                        titOnClassName:"active"
+                    });
+                });
+			</script>
+
+			<div class="element">
+				<div class="displayView">
+					<div class="offcanvas">
+						<!-- 这是用来触发抽屉式边栏的按钮 -->
+						<button class="uk-button" data-uk-offcanvas="{target:'#offcanvas-3'}">点击此按钮，查看演示</button>
+
+						<!-- 抽屉式边栏 -->
+						<div id="offcanvas-3" class="uk-offcanvas">
+
+							<div class="uk-offcanvas-bar">
+
+								<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+									<li><a href="">Item</a></li>
+									<li class="uk-active"><a href="">Active</a></li>
+
+									<li class="uk-parent">
+										<a href="#">Parent</a>
+										<ul class="uk-nav-sub">
+											<li><a href="">Sub item</a></li>
+											<li><a href="">Sub item</a>
+												<ul>
+													<li><a href="">Sub item</a></li>
+													<li><a href="">Sub item</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+
+									<li class="uk-parent">
+										<a href="#">Parent</a>
+										<ul class="uk-nav-sub">
+											<li><a href="">Sub item</a></li>
+											<li><a href="">Sub item</a></li>
+										</ul>
+									</li>
+									<li><a href="">Item</a></li>
+									<li class="uk-nav-header">Header</li>
+									<li class="uk-parent"><a href=""><i class="uk-icon-star"></i> Parent</a></li>
+									<li><a href=""><i class="uk-icon-twitter"></i> Item</a></li>
+									<li class="uk-nav-divider"></li>
+									<li><a href=""><i class="uk-icon-rss"></i> Item</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<!--3.1change-->
+			<div class="element">
+				<div class="displayView">
+					<!-- 计数区域-->
+					<div class="countArea">
+						<div class="countLabel EN_L">
+							<img src="images/icons/numofpinglun.png" class="floatLeft"></img>
+							<label>7243</label>
+						</div>
+						<div class="countLabel EN_L">
+							<img src="images/icons/numofyuedu.png" class="floatLeft"></img>
+							<label>337</label>
+						</div>
+						<div class="countLabel EN_L">
+							<img src="images/icons/numofshoucang.png" class="floatLeft"></img>
+							<label>825</label>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html"> 
+				     &lt;div class="countArea"&gt;
+						&lt;div class="countLabel EN_L"&gt;
+							&lt;img src="images/icons/numofpinglun.png" class="floatLeft"&gt;&lt;/img&gt;
+							&lt;label&gt;7243&lt;/label&gt;
+						&lt;/div&gt;
+						&lt;div class="countLabel EN_L"&gt;
+							&lt;img src="images/icons/numofyuedu.png" class="floatLeft"&gt;&lt;/img&gt;
+							&lt;label&gt;337&lt;/label&gt;
+						&lt;/div&gt;
+						&lt;div class="countLabel EN_L"&gt;
+							&lt;img src="images/icons/numofshoucang.png" class="floatLeft"&gt;&lt;/img&gt;
+							&lt;label&gt;825&lt;/label&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;      	
+           		</code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 推荐标识-->
+					<div class="recommendSymbol">
+						<button class="button recommendButton EN_L">
+							<label>推 荐</label>
+						</button>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">  
+					&lt;div class="recommendSymbol"&gt;
+						&lt;button class="button recommendButton EN_L"&gt;
+							&lt;label&gt;推 荐&lt;/label&gt;
+						&lt;/button&gt;
+					&lt;/div&gt;        	
+           		</code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 日历组件-->
+					<div class="Calendar">
+						<div id="idCalendarPre">&lt;&lt;</div>
+							<div id="idCalendarNext">&gt;&gt;</div>
+							<span id="idCalendarYear">2008</span>年<span id="idCalendarMonth">8</span>月
+						 <table cellspacing="0">
+						    <thead>
+						      <tr>						      
+						        <td>日</td>
+						        <td>一</td>
+						        <td>二</td>
+						        <td>三</td>
+						        <td>四</td>
+						        <td>五</td>
+						        <td>六</td>
+						      </tr>
+						    </thead>
+						    <tbody id="idCalendar">
+						    </tbody>
+						</table>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+					&lt;div class="Calendar"&gt;
+						&lt;div id="idCalendarPre"&gt;&lt;&lt;&lt;/div&gt;
+							&lt;div id="idCalendarNext"&gt;&gt;&gt;&lt;/div&gt;
+							&lt;span id="idCalendarYear"&gt;2008&lt;/span&gt;年&lt;span id="idCalendarMonth"&gt;8&lt;/span&gt;月
+						 &lt;table cellspacing="0"&gt;
+						    &lt;thead&gt;
+						      &lt;tr&gt;						      
+						        &lt;td&gt;日&lt;/td&gt;
+						        &lt;td&gt;一&lt;/td&gt;
+						        &lt;td&gt;二&lt;/td&gt;
+						        &lt;td&gt;三&lt;/td&gt;
+						        &lt;td&gt;四&lt;/td&gt;
+						        &lt;td&gt;五&lt;/td&gt;
+						        &lt;td&gt;六&lt;/td&gt;
+						      &lt;/tr&gt;
+						    &lt;/thead&gt;
+						    &lt;tbody id="idCalendar"&gt;
+						    &lt;/tbody&gt;
+						&lt;/table&gt;
+					&lt;/div&gt;         	
+           		</code></pre>
+           		<pre><p>javascript代码如下：</p><code class="language-javascript">
+				 	&lt;script src="js/calendar.js"&gt;&lt;/script&gt;
+           		</code></pre>
+			</div>
+			<script src="js/calendar.js"></script>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 返回顶部-->
+					<div class="totopButton">					
+						<div class="buttonTop button EN_L">
+								<img src="images/icons/totop.png"/>Top
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html"> 
+					&lt;div class="totopButton"&gt;					
+						&lt;div class="buttonTop button EN_L"&gt;
+								&lt;img src="images/icons/totop.png"/&gt;Top
+						&lt;/div&gt;
+					&lt;/div&gt;          	
+           		</code></pre>
+           		<pre><p>javascript代码如下：</p><code class="language-javascript"> 
+					$(function(){
+	                    $('.buttonTop').on('click', function () {
+				            $('html,body').animate({
+				                scrollTop: 0
+				            }, 400);
+				            return false;
+				        });
+	                });           	
+           		</code></pre>
+			</div>
+			<script type="text/javascript">
+                $(function(){
+                    $('.buttonTop').on('click', function () {
+			            $('html,body').animate({
+			                scrollTop: 0
+			            }, 400);
+			            return false;
+			        });
+                });               
+			</script>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 放大查看图片-->
+					<div class="viewEnlargedPicture">					
+						<div class="enlargedPicture">
+							<img src="images/banner/hexiehao.jpg"/>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">  
+					&lt;div class="viewEnlargedPicture"&gt;					
+						&lt;div class="enlargedPicture"&gt;
+							&lt;img src="images/banner/hexiehao.jpg"/&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;         	
+           		</code></pre>
+           		<pre><p>css代码如下：</p><code class="language-html"> 					
+					.enlargedPicture:hover {
+						transform:scale(2.2);
+						-webkit-transform:scale(2.2);
+						-moz-transform:scale(2.2);
+						-o-transform:scale(2.2);
+						-ms-transform:scale(2.2);
+					}        	
+           		</code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<div class="navigator4Area">
+						<nav>
+							<ul class="menu">
+								<li><a href="#"><span class="iconic home"></span> Home</a></li>
+								<li><a href="#"><span class="iconic plus-alt"></span> About</a>
+									<ul>
+										<li><a href="#">Company History</a></li>
+										<li><a href="#">Meet the team</a></li>
+									</ul>
+								</li>
+								<li><a href="#"><span class="iconic magnifying-glass"></span> Services</a>
+									<ul>
+										<li><a href="#">Web Design</a></li>
+										<li><a href="#">App Development</a></li>
+										<li><a href="#">Email Campaigns</a></li>
+										<li><a href="#">Copyrighting</a></li>
+									</ul>
+								</li>
+								<li><a href="#"><span class="iconic map-pin"></span> Products</a>
+									<ul>
+										<li><a href="#">Widget One</a></li>
+										<li><a href="#">Widget Two</a></li>
+										<li><a href="#">Web App Three</a></li>
+										<li><a href="#">Web App Four</a></li>
+									</ul>
+								</li>
+								<li><a href="#"><span class="iconic mail"></span> Contact</a>
+									<ul>
+										<li><a href="#">Contact Us</a></li>
+										<li><a href="#">Directions</a></li>
+									</ul>
+								</li>
+							</ul>
+							<div class="clearfix"></div>
+						</nav>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">            	
+           			&lt;div class="navigator4Area"&gt;
+						&lt;nav&gt;
+							&lt;ul class="menu"&gt;
+								&lt;li&gt;&lt;a href="#"&gt;&lt;span class="iconic home"&gt;&lt;/span&gt; Home&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="#"&gt;&lt;span class="iconic plus-alt"&gt;&lt;/span&gt; About&lt;/a&gt;
+									&lt;ul&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Company History&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Meet the team&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/li&gt;
+								&lt;li&gt;&lt;a href="#"&gt;&lt;span class="iconic magnifying-glass"&gt;&lt;/span&gt; Services&lt;/a&gt;
+									&lt;ul&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Web Design&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;App Development&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Email Campaigns&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Copyrighting&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/li&gt;
+								&lt;li&gt;&lt;a href="#"&gt;&lt;span class="iconic map-pin"&gt;&lt;/span&gt; Products&lt;/a&gt;
+									&lt;ul&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Widget One&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Widget Two&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Web App Three&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Web App Four&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/li&gt;
+								&lt;li&gt;&lt;a href="#"&gt;&lt;span class="iconic mail"&gt;&lt;/span&gt; Contact&lt;/a&gt;
+									&lt;ul&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt;&lt;a href="#"&gt;Directions&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;
+							&lt;div class="clearfix"&gt;&lt;/div&gt;
+						&lt;/nav&gt;
+					&lt;/div&gt;
+           		</code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!--榜单-->
+					<div class="billboard">
+						<ol class="billboardList">
+							<li class="billboardTitle">热议榜<a class="floatRight billboardLink">查看榜单</a><li>
+							<li><span class="hotTopic">1</span>中国工程院院士首次“独揽”国家最高科学技术奖！<span class="numTopic floatRight">826351</span><li>
+							<li><span class="hotTopic">2</span>基因疗法治疗血凝疾病展现新潜力<span class="numTopic floatRight">759632</span><li>
+							<li><span class="hotTopic">3</span>中国医改传播大数据<span class="numTopic floatRight">732569</span><li>
+							<li><span>4</span>全国城市地质工作会议在京召开<span class="numTopic floatRight">659821</span><li>
+							<li><span>5</span>新版《地下水质量标准》发布<span class="numTopic floatRight">632101</span><li>
+							<li><span>6</span>增强TiO2光催化处理有机废弃物的绿色空间探索<span class="numTopic floatRight">596324</span><li>
+							<li><span>7</span>数据开放共享是推进新型智慧城市建设的核心<span class="numTopic floatRight">542369</span><li>
+							<li><span>8</span>2017中国地理信息产业大会在贵阳召开<span class="numTopic floatRight">352684</span><li>
+							<li><span>9</span>徐冠华：创新驱动，推动我国GIS软件快速发展<span class="numTopic floatRight">215488</span><li>
+							<li><span>10</span>库热西：抢抓机遇，做强做大我国地理信息产业<span class="numTopic floatRight">102321</span><li>
+						</ol>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+					&lt;div class="billboard"&gt;
+						&lt;ol class="billboardList"&gt;
+							&lt;li class="billboardTitle"&gt;热议榜&lt;a class="floatRight billboardLink"&gt;查看榜单&lt;/a&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span class="hotTopic"&gt;1&lt;/span&gt;中国工程院院士首次“独揽”国家最高科学技术奖！&lt;span class="numTopic floatRight"&gt;826351&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span class="hotTopic"&gt;2&lt;/span&gt;基因疗法治疗血凝疾病展现新潜力&lt;span class="numTopic floatRight"&gt;759632&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span class="hotTopic"&gt;3&lt;/span&gt;中国医改传播大数据&lt;span class="numTopic floatRight"&gt;732569&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;4&lt;/span&gt;全国城市地质工作会议在京召开&lt;span class="numTopic floatRight"&gt;659821&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;5&lt;/span&gt;新版《地下水质量标准》发布&lt;span class="numTopic floatRight"&gt;632101&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;6&lt;/span&gt;增强TiO2光催化处理有机废弃物的绿色空间探索&lt;span class="numTopic floatRight"&gt;596324&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;7&lt;/span&gt;数据开放共享是推进新型智慧城市建设的核心&lt;span class="numTopic floatRight"&gt;542369&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;8&lt;/span&gt;2017中国地理信息产业大会在贵阳召开&lt;span class="numTopic floatRight"&gt;352684&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;9&lt;/span&gt;徐冠华：创新驱动，推动我国GIS软件快速发展&lt;span class="numTopic floatRight"&gt;215488&lt;/span&gt;&lt;li&gt;
+							&lt;li&gt;&lt;span&gt;10&lt;/span&gt;库热西：抢抓机遇，做强做大我国地理信息产业&lt;span class="numTopic floatRight"&gt;102321&lt;/span&gt;&lt;li&gt;
+						&lt;/ol&gt;
+					&lt;/div&gt;
+           		</code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 分类导航-->
+					<div class="classifyNavigation">
+						<h4>专题分类<span class="separator">———————————</span></h4>
+						<div class="classifyNavbar">
+							<div class="EN_L">
+								<img src="images/icons/zixunfuwu.png" class="floatLeft"></img>
+								<label>咨询服务</label>
+							</div>
+							<ul class="EN_M">
+								<li>智能制造</li>
+								<li>路线图</li>
+								<li>技术预见</li>
+								<li>问卷</li>
+							</ul>
+						</div>
+						<div class="classifyNavbar">
+							<div class="EN_L">
+								<img src="images/icons/yiliaoweisheng.png" class="floatLeft"></img>
+								<label>医疗卫生</label>
+							</div>
+							<ul class="EN_M">
+								<li>精准医学</li>
+								<li>肿瘤</li>
+								<li>环境健康</li>
+								<li>心脑血管</li>
+							</ul>
+						</div>
+						<div class="classifyNavbar">
+							<div class="EN_L">
+								<img src="images/icons/shujuziyuan.png" class="floatLeft"></img>
+								<label>数据资源</label>
+							</div>
+							<ul class="EN_M">
+								<li>气象数据</li>
+								<li>农业数据</li>
+								<li>地理数据</li>
+								<li>环境数据</li>
+							</ul>
+						</div>
+						<div class="classifyNavbar">
+							<div class="EN_L">
+								<img src="images/icons/tesefuwu.png" class="floatLeft"></img>
+								<label>特色服务</label>
+							</div>
+							<ul class="EN_M">
+								<li>一带一路</li>
+								<li>创新创业</li>
+								<li>专家库</li>
+								<li>院士馆</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+					&lt;div class="classifyNavigation"&gt;
+						&lt;h4&gt;专题分类&lt;span class="separator"&gt;———————————&lt;/span&gt;&lt;/h4&gt;
+						&lt;div class="classifyNavbar"&gt;
+							&lt;div class="EN_L"&gt;
+								&lt;img src="images/icons/zixunfuwu.png" class="floatLeft"&gt;&lt;/img&gt;
+								&lt;label&gt;咨询服务&lt;/label&gt;
+							&lt;/div&gt;
+							&lt;ul class="EN_M"&gt;
+								&lt;li&gt;智能制造&lt;/li&gt;
+								&lt;li&gt;路线图&lt;/li&gt;
+								&lt;li&gt;技术预见&lt;/li&gt;
+								&lt;li&gt;问卷&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;div class="classifyNavbar"&gt;
+							&lt;div class="EN_L"&gt;
+								&lt;img src="images/icons/yiliaoweisheng.png" class="floatLeft"&gt;&lt;/img&gt;
+								&lt;label&gt;医疗卫生&lt;/label&gt;
+							&lt;/div&gt;
+							&lt;ul class="EN_M"&gt;
+								&lt;li&gt;精准医学&lt;/li&gt;
+								&lt;li&gt;肿瘤&lt;/li&gt;
+								&lt;li&gt;环境健康&lt;/li&gt;
+								&lt;li&gt;心脑血管&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;div class="classifyNavbar"&gt;
+							&lt;div class="EN_L"&gt;
+								&lt;img src="images/icons/shujuziyuan.png" class="floatLeft"&gt;&lt;/img&gt;
+								&lt;label&gt;数据资源&lt;/label&gt;
+							&lt;/div&gt;
+							&lt;ul class="EN_M"&gt;
+								&lt;li&gt;气象数据&lt;/li&gt;
+								&lt;li&gt;农业数据&lt;/li&gt;
+								&lt;li&gt;地理数据&lt;/li&gt;
+								&lt;li&gt;环境数据&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;div class="classifyNavbar"&gt;
+							&lt;div class="EN_L"&gt;
+								&lt;img src="images/icons/tesefuwu.png" class="floatLeft"&gt;&lt;/img&gt;
+								&lt;label&gt;特色服务&lt;/label&gt;
+							&lt;/div&gt;
+							&lt;ul class="EN_M"&gt;
+								&lt;li&gt;一带一路&lt;/li&gt;
+								&lt;li&gt;创新创业&lt;/li&gt;
+								&lt;li&gt;专家库&lt;/li&gt;
+								&lt;li&gt;院士馆&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;     	
+           		</code></pre>
+			</div>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 音频播放-->
+					<div class="audioPlayer" id="audioWrapper">
+						<audio preload="auto" controls>
+							<source src="resource/BlueDucks_FourFlossFiveSix.mp3">
+							<source src="resource/BlueDucks_FourFlossFiveSix.ogg">
+							<source src="resource/BlueDucks_FourFlossFiveSix.wav">
+						</audio>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+				 	&lt;div class="audioPlayer" id="audioWrapper"&gt;
+						&lt;audio preload="auto" controls&gt;
+							&lt;source src="resource/BlueDucks_FourFlossFiveSix.mp3"&gt;
+							&lt;source src="resource/BlueDucks_FourFlossFiveSix.ogg"&gt;
+							&lt;source src="resource/BlueDucks_FourFlossFiveSix.wav"&gt;
+						&lt;/audio&gt;
+					&lt;/div&gt;        	
+           		</code></pre>
+           		<pre><p>javascript代码如下：</p><code class="language-javascript">
+				 	&lt;script src="js/audioplayer.js"&gt;&lt;/script&gt;
+					&lt;script&gt;$(function(){$('audio').audioPlayer();});&lt;/script&gt;
+           		</code></pre>
+			</div>			
+			<script src="js/audioplayer.js"></script>
+			<script>$(function(){$('audio').audioPlayer();});</script>
+
+			<div class="element">
+				<div class="displayView">
+					<!-- 视频播放-->
+					<div class="videoPlayer" id="videoContainer">
+						<video controls="controls">
+							  <source src="resource/ckcest.mp4"  type="video/mp4">
+							  <source src="resource/ckcest.ogg"  type="video/ogg">
+						</video>
+						<div id="videoControls">
+							<button id="videoPlay" class="videoPlay" title="Play"></button>
+							<div id="videoProgress">
+								<div id="videoProgressBox">
+									<span id="videoPlayProgress"></span>
+								</div>
+							</div>
+							<div id="videoVolume" class="hidden">
+								<div id="videoVolumeBox">
+									<span id="videoVolumeProgress"></span>
+								</div>
+							</div>
+							<button id="videoVolumeButton" title="Volume Toggle"></button>
+							<button id="videoFullScreen" title="FullScreen Toggle"></button>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p><code class="language-html">
+					&lt;div class="videoPlayer" id="videoContainer"&gt;
+						&lt;video controls="controls"&gt;
+							  &lt;source src="resource/ckcest.mp4"  type="video/mp4"&gt;
+							  &lt;source src="resource/ckcest.ogg"  type="video/ogg"&gt;
+						&lt;/video&gt;
+						&lt;div id="videoControls"&gt;
+							&lt;button id="videoPlay" class="videoPlay" title="Play"&gt;&lt;/button&gt;
+							&lt;div id="videoProgress"&gt;
+								&lt;div id="videoProgressBox"&gt;
+									&lt;span id="videoPlayProgress"&gt;&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;div id="videoVolume" class="hidden"&gt;
+								&lt;div id="videoVolumeBox"&gt;
+									&lt;span id="videoVolumeProgress"&gt;&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;button id="videoVolumeButton" title="Volume Toggle"&gt;&lt;/button&gt;
+							&lt;button id="videoFullScreen" title="FullScreen Toggle"&gt;&lt;/button&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;           	
+           		</code></pre>
+           		<pre><p>javascript代码如下：</p><code class="language-javascript">
+				 	&lt;script src="js/videoPlayer.js"&gt;&lt;/script&gt;
+           		</code></pre>
+			</div>
+			<script src="js/videoPlayer.js"></script>
+
+			<div class="element">
+				<div class="displayView2">
+					<div class="Downloadbtn">
+						<button class="Downloadbtn button EN_L">
+							<img src="images/Downloadbtn.png" class="floatLeft"></img>
+							<label>Download</label>
+						</button>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+	            	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Downloadbtn"&gt;
+			            	&lt;button class="Downloadbtn"  type="button"&gt;
+			                	&lt;img src="images/Downloadbtn.png"&gt;&lt;/img&gt;
+								&lt;p&gt;Download&lt;/p&gt;
+							&lt;/button&gt;
+	            		&lt;/div&gt;
+	            	&lt;/div&gt;
+	            	</code>
+       			 </pre>
+			</div>
+			<div class="element">
+					<div class="displayView2">
+						<div class="Thumbup">
+							<button class="Thumbup"  type="button">
+								<img src="images/Thumbup.png"></img>
+							</button>
+						</div>
+					</div>
+					<pre><p>html代码如下：</p>
+						<code class="language-html">
+		            	&lt;div class="displayView2">&gt;
+			            	&lt;div class="Thumbup"&gt;
+				            	&lt;button class="Thumbup"  type="button"&gt;
+				                	&lt;img src="images/Thumbup.png"&gt;&lt;/img&gt;
+								&lt;/button&gt;
+		            		&lt;/div&gt;
+		            	&lt;/div&gt;
+		            	</code>
+	       			 </pre>
+	       			 <pre><p>javascript代码如下：</p><code class="language-javascript">
+	            	&lt;script&gt;
+	            		$(".Thumbup").children("img").click(function(){
+							var nowPic=$(this).attr("src");
+							if(nowPic=="images/Thumbup.png"){
+					    		$(this).attr("src","images/Thumbup2.png");
+							}
+							else{
+								$(this).attr("src","images/Thumbup.png");
+
+							}
+						})
+	            	&lt;/script&gt;
+	            </code></pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Collect">
+						<button class="Collect"  type="button" >
+							<img src="images/Collect.png"></img>
+						</button>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Collect"&gt;
+			            	&lt;button class="Collect"  type="button"&gt;
+			                	&lt;img src="images/Collect.png"&gt;&lt;/img&gt;
+							&lt;/button&gt;
+		        		&lt;/div&gt;
+		        	&lt;/div&gt;
+		        	</code>
+					 </pre>
+				<pre><p>javascript代码如下：</p><code class="language-javascript">
+	            	&lt;script&gt;
+	            		var nowPic=$(this).attr("src");
+						if(nowPic=="images/Collect.png"){
+				    		$(this).attr("src","images/Collect2.png");
+						}
+						else{
+							$(this).attr("src","images/Collect.png");
+
+						}
+					})
+	            	&lt;/script&gt;
+	            </code></pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Share">
+						<button class="Share"  type="button" >
+							<img src="images/Share.png"></img>
+						</button>
+						<div class="shareList" hidden>
+							<img src="images/wechat.png" style="margin-top:23px;"></img><br/>
+							<img src="images/pengyouquan.png"></img><br/>
+							<img src="images/weibo.png"></img>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Share"&gt;
+			            	&lt;button class="Share"  type="button"&gt;
+			                	&lt;img src="images/Share.png"&gt;&lt;/img&gt;
+							&lt;/button&gt;
+							&lt;div class="shareList" hidden&gt;
+								&lt;img src="images/wechat.png" style="margin-top:23px;"&gt;&lt;/img&gt;&lt;br/&gt;
+								&lt;img src="images/pengyouquan.png"&gt;&lt;/img&gt;&lt;br/&gt;
+								&lt;img src="images/weibo.png"&gt;&lt;/img&gt;
+							&lt;/div&gt;
+		        		&lt;/div&gt;
+		        	&lt;/div&gt;
+		        	</code>
+					 </pre>
+					 <pre><p>javascript代码如下：</p><code class="language-javascript">
+	            	&lt;script&gt;
+						$(".Share").children("img").click(function(){
+							if($('.shareList').is(':hidden')){
+				       			 $('.shareList').show();
+				       		}	        
+					        else
+					        { 
+					        $('.shareList').hide();
+					        } 
+						})
+
+	            	&lt;/script&gt;
+	            </code></pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Personalcard">
+						<div class="Personalbg" >
+							<img src="images/up.png"> 
+					    </div> 
+				        <div class="Personalpic"> 
+				            <img src="images/photo.png"> 
+				        </div>
+			            <div class="Personalmes" > 
+			            	<div><p class="PersonalName">Lyne WILLIAMS</p></div>
+			            	<div><p class="PersonalRed">Academician</p></div>
+			            	<div><button class="PersonalFo">FOLLOW ME</button></div>
+			            	<hr />
+			            	<div class="followMes">
+			            		<span style="font-weight:bold;">1,698</span><span style="margin-right:20px;margin-left:10px;">following </span>
+			            		<span style="font-weight:bold;">257</span><span style="margin-right:20px;margin-left:10px;">followers</span>
+			            	</div>
+			            </div> 
+			    	</div>
+				</div>	
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Personalcard"&gt;
+		            		&lt;div class="Personalbg" &gt;
+			                	&lt;img src="images/up.png"&gt;
+			                &lt;div&gt;
+			                &lt;div class="Personalpic" &gt;
+			                	&lt;img src="images/photo.png"&gt;
+			                &lt;div&gt;
+			                &lt;div class="Personalmes" &gt;
+			                	&lt;div&gt;&lt;p class="PersonalName"&gt;Lyne WILLIAMS&lt;/p&gt;&lt;/div&gt;
+			                	&lt;div&gt;&lt;p class="PersonalRed"&gt;Academician&lt;/p&gt;&lt;/div&gt;
+			                	&lt;div&gt;&lt;button class="PersonalFo"&gt;FOLLOW ME&lt;/button&gt;&lt;/div&gt;
+			                	&lt;hr/&gt;
+			                	&lt;div class="followMes"&gt;
+			                		&lt;span style="font-weight:bold;" &gt;1698&lt;/span&gt;&lt;span style="margin-right:20px;margin-left:10px;"&gt;following&lt;/span&gt;
+			                		&lt;span style="font-weight:bold;" &gt;257&lt;/span&gt;&lt;span style="margin-right:20px;margin-left:10px;"&gt;followers&lt;/span&gt;
+			                &lt;div&gt;
+		        		&lt;/div&gt;
+		        	&lt;/div&gt;
+		        	</code>
+					 </pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Post">
+						<div>
+							<textarea  class="PostInput" >The beast was there showing the way Boulders were the scales upon it's back.
+							</textarea>
+						</div>
+						<div>
+							<button class="Postbtn1">Discard</button>
+							<button class="Postbtn2">Save</button>
+							<button class="Postbtn3">Post</button>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Post"&gt;
+		            		&lt;div&gt;
+			            		&lt;textarea  class="PostInput" &gt;The beast was there showing the way Boulders were the scales upon it's back.
+			            		&lt;/textarea&gt;
+							&lt;/div&gt;
+							&lt;div&gt;
+								&lt;button class="Postbtn1"&gt;Discard&lt;/button&gt;
+								&lt;button class="Postbtn2"&gt;Save&lt;/button&gt;
+								&lt;button class="Postbtn3"&gt;Post&lt;/button&gt;
+							&lt;/div&gt;
+		        		&lt;/div&gt;
+		        	&lt;/div&gt;
+		        	</code>
+					 </pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Notice">
+						<span>2017 Global (Shanghai) Artificial Intelligence Innovation Summit </span>
+						<img src="images/notice.png"/>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Notice"&gt;
+		            		&lt;span&gt;
+			            		2017 Global (Shanghai) Artificial Intelligence Innovation Summit 
+			            	&lt;/span&gt;
+							&lt;img src="images/notice.png"/&gt;
+		        	&lt;/div&gt;
+		        	</code>
+				 </pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Tabs">
+					  <ul class="choiceList">
+					    <li class="box active-0">Label</li>
+					    <li class="box">Label</li>
+					    <li class="box">Label</li>
+					  </ul>
+					  <div class="tabsContain">
+						  <div class="content active-1">Lorem ipsum dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						  </div>
+						  <div class="content">
+						    Lorem onsecte tuer, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						  </div>
+						  <div class="content">
+						    Loremmod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					 	  </div>
+					  </div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Tabs"&gt;
+		            		&lt;ul class="choiceList"&gt;
+			            		&lt;li class="box active-0"&gt;Label&lt;/li&gt;
+			            		&lt;li class="box"&gt;Label&lt;/li&gt;
+			            		&lt;li class="box"&gt;Label&lt;/li&gt;
+			            	&lt;/ul&gt;
+							&lt;div class="tabsContain"&gt;
+								&lt;div class="content active-1"&gt;Lorem ipsum dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								&lt;/div&gt;
+								&lt;div class="content"&gt; Lorem onsecte tuer, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+								&lt;/div&gt;
+								&lt;div class="content"&gt;Loremmod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								&lt;/div&gt;
+		        		&lt;/div&gt;
+		        	&lt;/div&gt;
+		        	</code>
+				</pre>
+				<pre><p>javascript代码如下：</p>
+					<code class="language-javascript">
+						&lt;script&gt;
+			        		$(".box").click(function(){
+								$(this).addClass("active-0");
+								$(this).siblings().removeClass("active-0");
+								$(".content").eq($(".choiceList li").index(this))
+												.addClass("active-1")
+												.siblings().removeClass("active-1");
+							});
+						&lt;/script&gt;
+		        	</code>
+				</pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Modal">
+						<div class="Question">
+							<span class="Question" style="margin-right:115px;">Close this page?</span>
+							<span class="Question" style="color:#e5e4e4">X</span>
+						</div>
+						<hr/>
+						<div class="deepQue">Are you sure you want to </br> close this page?</div>
+						<hr/>
+						<div class="NoYes">
+							<button class="No">No</button>
+							<button class="Yes">Yes</button>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Modal"&gt;
+		            		&lt;div class="Question"&gt;
+			           			&lt;span class="Question" style="margin-right:115px;"&gt;Close this page?
+			            		&lt;/span&gt;
+			            		&lt;span class="Question" style="color:#e5e4e4"&gt;X
+			            		&lt;/span&gt;
+							&lt;div/&gt;
+							&lt;hr/&gt;
+							&lt;div class="deepQue"&gt;Are you sure you want to &lt;/br&gt;close this page?
+							&lt;div/&gt;
+							&lt;hr/&gt;
+							&lt;div class="NoYes"&gt;
+								&lt;button class="No"&gt;&lt;/button&gt;
+								&lt;button class="Yes"&gt;&lt;/button&gt;
+							&lt;/div&gt;
+		        		&lt;/div&gt;
+		        	&lt;/div&gt;
+		        	</code>
+				 </pre>
+			</div>
+			<div class="element">
+				<div class="displayView2">
+					<div class="Map">
+						<div class="imageMap">
+							<img src="images/map.png"/>
+						</div>
+						<div class="detailMap">
+							<div class="leftDet">
+								<p>Fabric Studio</p>
+								<p style="font-size:15px;color:#a9a9a9;">Knowhwere Avenue<br/>Marvel Street 024<br/>Sun Galaxy</p>
+							</div>
+							<div class="rightDet">
+								<img src="images/location.png"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<pre><p>html代码如下：</p>
+					<code class="language-html">
+		        	&lt;div class="displayView2">&gt;
+		            	&lt;div class="Notice"&gt;
+		            		&lt;span&gt;
+			            		2017 Global (Shanghai) Artificial Intelligence Innovation Summit 
+			            	&lt;/span&gt;
+							&lt;img src="images/notice.png"/&gt;
+		        	&lt;/div&gt;
+		        	</code>
+				 </pre>
+			</div>
+		</div>
+		<!-- <div id = "toTop">返回顶部</div> -->
+	</div>
+
+
+	<!--<div class="clearfix"></div>-->
+</div>
+
+<!---->
+<!---->
+</body>
+</html>
